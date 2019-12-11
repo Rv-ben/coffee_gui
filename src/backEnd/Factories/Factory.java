@@ -14,6 +14,6 @@ public interface Factory{
      * Creates a product
      * @return Product Object
      */
-    public abstract Product createProduct(Object details ,Object Decorators);
+    public abstract Product createProduct(Object details);
 
 }

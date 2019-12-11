@@ -22,7 +22,7 @@ public class PastryFactory implements Factory{
      * @param quantity int 
      * @return Product Object 
      */
-    public Product createProduct(Object type, Object det) {
+    public Product createProduct(Object det) {
         Pastry pastry;
 
         Details details = (Details)det;
@@ -35,23 +35,5 @@ public class PastryFactory implements Factory{
         return null;
     }
     
-     public Product createProduct(guiProduct g) {
-
-        Drink drink;
-        Details details = (Details)g.getDet();
-     
-
-         switch(details.pType){
-            case croissant: return new Croissant(details.pType,details.special,details.heated);
-            case cookie: return new Cookie(details.pType,details.special,details.qty);
-            case macaroon: return new Macaroon(details.pType, details.special,details.qty);
-        }
-
-        
-
-        return null;
-    }
-    
-    
-
+   
 }

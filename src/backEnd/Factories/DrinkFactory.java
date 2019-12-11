@@ -37,39 +37,18 @@ public class DrinkFactory implements Factory{
     HashMap<String,Double> priceMap;
  
     
-    public Product createProduct(Object typeSize, Object decorators) {
+    public Product createProduct(Object details) {
 
         Drink drink;
-        Details details = (Details)typeSize;
+        Details detail = (Details)details;
 
 
-        drink = drinkType(details);
-
-        //Checks if there decorators
-        if(decorators != null){
-        
-            for(ToppingTypes i: (ArrayList<ToppingTypes>)decorators){
-                drink = addDecorators(i, drink);
-            }
-
-        }
-
-        return drink;
-    }
-    
-    public Product createProduct(guiProduct g) {
-
-        Drink drink;
-        Details details = (Details)g.getDet();
-        ArrayList<ToppingTypes> decorators = (ArrayList<ToppingTypes>)g.getTList();
-
-
-        drink = drinkType(details);
+        drink = drinkType(detail);
 
         //Checks if there decorators
-        if(decorators != null){
+        if(detail.toppings != null){
         
-            for(ToppingTypes i: (ArrayList<ToppingTypes>)decorators){
+            for(ToppingTypes i: detail.toppings){
                 drink = addDecorators(i, drink);
             }
 

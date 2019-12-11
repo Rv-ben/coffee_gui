@@ -1,5 +1,7 @@
 package backEnd.enums;
 
+import java.util.ArrayList;
+
 /**
  * Struct class holding size and type of drink
  * @author Ruben Bramasco
@@ -15,4 +17,5 @@ public class Details{
     public PastryTypes pType;
     public PastryTypes special;
     public int qty;
+    public ArrayList<ToppingTypes> toppings = new ArrayList<ToppingTypes>();
 }
