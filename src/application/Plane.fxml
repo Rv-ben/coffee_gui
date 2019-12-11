@@ -20,7 +20,7 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PaneController">
    <children>
       <TitledPane layoutX="667.0" layoutY="28.0" prefHeight="594.0" prefWidth="298.0" />
-      <Pane fx:id="teaScreen" layoutX="119.0" layoutY="31.0" prefHeight="594.0" prefWidth="543.0">
+      <Pane fx:id="teaScreen" layoutX="119.0" layoutY="31.0" prefHeight="594.0" prefWidth="543.0" visible="false">
          <children>
             <HBox prefHeight="100.0" prefWidth="532.0">
                <children>
@@ -522,6 +522,161 @@
                      <children>
                         <Button fx:id="Plus" layoutX="135.0" layoutY="1.0" mnemonicParsing="false" onAction="#toppingCount" prefHeight="96.0" prefWidth="135.0" text="+" />
                         <Button fx:id="Minus" layoutX="135.0" layoutY="96.0" mnemonicParsing="false" onAction="#toppingCount" prefHeight="96.0" prefWidth="135.0" text="-" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="-3.0" prefHeight="192.0" prefWidth="135.0" text="0" textFill="#54f206">
+                           <font>
+                              <Font size="48.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Label alignment="CENTER" prefHeight="195.0" prefWidth="285.0" text="ADD TO CART">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+      <Pane fx:id="croissantScreen" layoutX="110.0" layoutY="24.0" prefHeight="608.0" prefWidth="543.0" visible="false">
+         <children>
+            <HBox layoutX="14.0" layoutY="14.0" prefHeight="100.0" prefWidth="509.0" />
+            <HBox layoutX="14.0" layoutY="114.0" prefHeight="100.0" prefWidth="510.0">
+               <children>
+                  <TitledPane animated="false" prefHeight="100.0" prefWidth="513.0" text="SELECTED CROISSANT TYPE">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ChoiceBox layoutX="79.0" layoutY="23.0" prefHeight="27.0" prefWidth="339.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </TitledPane>
+               </children>
+            </HBox>
+            <GridPane gridLinesVisible="true" layoutY="415.0" prefHeight="192.0" prefWidth="542.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <Button fx:id="Plus1" layoutX="135.0" layoutY="1.0" mnemonicParsing="false" onAction="#toppingCount" prefHeight="96.0" prefWidth="135.0" text="+" />
+                        <Button fx:id="Minus1" layoutX="135.0" layoutY="96.0" mnemonicParsing="false" onAction="#toppingCount" prefHeight="96.0" prefWidth="135.0" text="-" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="-3.0" prefHeight="192.0" prefWidth="135.0" text="0" textFill="#54f206">
+                           <font>
+                              <Font size="48.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Label alignment="CENTER" prefHeight="195.0" prefWidth="285.0" text="ADD TO CART">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <TitledPane animated="false" layoutX="14.0" layoutY="214.0" prefHeight="100.0" prefWidth="510.0" text="SIZE">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutY="3.0" prefHeight="66.0" prefWidth="508.0">
+                           <columnConstraints>
+                              <ColumnConstraints />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <RadioButton fx:id="large1" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="66.0" prefWidth="506.0" text="Heated" GridPane.columnIndex="1" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+         </children>
+      </Pane>
+      <Pane fx:id="cookieScreen" layoutX="101.0" layoutY="24.0" prefHeight="608.0" prefWidth="543.0" visible="false">
+         <children>
+            <HBox layoutX="14.0" layoutY="14.0" prefHeight="100.0" prefWidth="509.0" />
+            <HBox layoutX="14.0" layoutY="114.0" prefHeight="100.0" prefWidth="510.0">
+               <children>
+                  <TitledPane animated="false" prefHeight="100.0" prefWidth="513.0" text="SELECTED COOKIE TYPE">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ChoiceBox layoutX="79.0" layoutY="23.0" prefHeight="27.0" prefWidth="339.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </TitledPane>
+               </children>
+            </HBox>
+            <GridPane gridLinesVisible="true" layoutY="415.0" prefHeight="192.0" prefWidth="542.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <Button fx:id="Plus11" layoutX="135.0" layoutY="1.0" mnemonicParsing="false" onAction="#toppingCount" prefHeight="96.0" prefWidth="135.0" text="+" />
+                        <Button fx:id="Minus11" layoutX="135.0" layoutY="96.0" mnemonicParsing="false" onAction="#toppingCount" prefHeight="96.0" prefWidth="135.0" text="-" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="-3.0" prefHeight="192.0" prefWidth="135.0" text="0" textFill="#54f206">
+                           <font>
+                              <Font size="48.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Label alignment="CENTER" prefHeight="195.0" prefWidth="285.0" text="ADD TO CART">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+      <Pane fx:id="macaroonScreen" layoutX="101.0" layoutY="24.0" prefHeight="608.0" prefWidth="543.0" visible="false">
+         <children>
+            <HBox layoutX="14.0" layoutY="14.0" prefHeight="100.0" prefWidth="509.0" />
+            <HBox layoutX="14.0" layoutY="114.0" prefHeight="100.0" prefWidth="510.0">
+               <children>
+                  <TitledPane animated="false" prefHeight="100.0" prefWidth="513.0" text="SELECTED MACAROON TYPE">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ChoiceBox layoutX="79.0" layoutY="23.0" prefHeight="27.0" prefWidth="339.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </TitledPane>
+               </children>
+            </HBox>
+            <GridPane gridLinesVisible="true" layoutY="415.0" prefHeight="192.0" prefWidth="542.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <Button fx:id="Plus111" layoutX="135.0" layoutY="1.0" mnemonicParsing="false" onAction="#toppingCount" prefHeight="96.0" prefWidth="135.0" text="+" />
+                        <Button fx:id="Minus111" layoutX="135.0" layoutY="96.0" mnemonicParsing="false" onAction="#toppingCount" prefHeight="96.0" prefWidth="135.0" text="-" />
                         <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="-3.0" prefHeight="192.0" prefWidth="135.0" text="0" textFill="#54f206">
                            <font>
                               <Font size="48.0" />
