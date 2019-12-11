@@ -5,14 +5,19 @@ import java.util.ArrayList;
 import javafx.event.*;
 import javafx.fxml.FXML;
 import javafx.scene.*;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 
+import backEnd.enums.*;
 public class PaneController {
 	
 	@FXML
-	private Pane coffeeScreen;
+	private Pane coffeeScreen,teaScreen;
+	
+	@FXML
+	private ChoiceBox coffeeChoice;
 	
 	
 	//Topping Labels
@@ -26,6 +31,7 @@ public class PaneController {
 	@FXML
 	public void initialize() {
 		productScreenList.add(coffeeScreen);
+		//coffeeChoice.getItems().add(DrinkTypes.almondLatte.toString());
 	}
 	
 	public void productButtonClicked(ActionEvent evt) {
@@ -34,7 +40,10 @@ public class PaneController {
 		
 		switch(source.getId()) {
 		case "CoffeeButton":
-			coffeeScreen.setVisible(true);
+			coffeeScreen.setVisible(true); break;
+		case "teaScreen":
+			teaScreen.setVisible(true); break;
+			
 		}
 	}
 	
