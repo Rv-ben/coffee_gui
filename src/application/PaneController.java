@@ -7,9 +7,15 @@ import javafx.fxml.FXML;
 import javafx.scene.*;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
-
+import backEnd.Decorators.ToppingPrices;
+import backEnd.Factories.DrinkFactory;
+import backEnd.Products.PastryPrices;
+import backEnd.Products.Product;
 import backEnd.enums.*;
 public class PaneController {
 	
@@ -19,6 +25,21 @@ public class PaneController {
 	@FXML
 	private ChoiceBox coffeeChoice;
 	
+	@FXML
+	private Label halfHalf,milk,soyMilk,whipCream;
+	
+	@FXML
+	private RadioButton small;
+	
+	@FXML
+	private ListView rec;
+	
+	@FXML
+	private DrinkFactory d  = new DrinkFactory();
+	
+	private ArrayList<Product> cart = new ArrayList<Product>();
+	
+	private LoadHelper x = new LoadHelper();
 	
 	//Topping Labels
 	@FXML
@@ -30,12 +51,19 @@ public class PaneController {
 	
 	@FXML
 	public void initialize() {
+		x.loadCoffeeChoiceBox(coffeeChoice);
+		
 		productScreenList.add(coffeeScreen);
 		productScreenList.add(teaScreen);
 		productScreenList.add(croissantScreen);
 		productScreenList.add(cookieScreen);
 		productScreenList.add(macaroonScreen);
-		//coffeeChoice.getItems().add(DrinkTypes.almondLatte.toString());
+
+        PastryPrices p = new PastryPrices();
+        ToppingPrices t = new ToppingPrices();
+
+        p.init();
+        t.init();
 	}
 	
 	public void productButtonClicked(ActionEvent evt) {
@@ -80,7 +108,36 @@ public class PaneController {
 
 	}
 	
+	public void addCoffeeToCart() {
+		Details coffee = new Details();
+		
+		coffee.spec = DrinkTypes.valueOf(((String)coffeeChoice.getValue()));
+		coffee.type = DrinkTypes.coffee;
+		coffee.size = Sizes.small;
+		
+		addToppings(coffee.toppings,Integer.parseInt(soyMilk.getText()),ToppingTypes.soyMilk);
+		addToppings(coffee.toppings,Integer.parseInt(halfHalf.getText()),ToppingTypes.halfHalf);
+		addToppings(coffee.toppings,Integer.parseInt(whipCream.getText()),ToppingTypes.whipCream);
+		
+		cart.add(d.createProduct(coffee));
+		updateRec();
+	}
 	
+	public void addToppings(ArrayList<ToppingTypes> t,int num,ToppingTypes topping) {
+		for(int i = 0;i<num;i++) {
+			t.add(topping);
+		}
+	}
 	
+	public void updateRec() {
+		
+		if(rec != null)
+			rec.getItems().clear();
+		
+		for(Product i : cart) {
+			rec.getItems().add(i.getDescription()+ "                                         "+ i.getCost());
+		}
+	}
 	
+
 }
