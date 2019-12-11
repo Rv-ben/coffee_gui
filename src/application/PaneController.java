@@ -31,6 +31,7 @@ public class PaneController {
 	@FXML
 	public void initialize() {
 		productScreenList.add(coffeeScreen);
+		productScreenList.add(teaScreen);
 		//coffeeChoice.getItems().add(DrinkTypes.almondLatte.toString());
 	}
 	
@@ -41,7 +42,7 @@ public class PaneController {
 		switch(source.getId()) {
 		case "CoffeeButton":
 			coffeeScreen.setVisible(true); break;
-		case "teaScreen":
+		case "TeaButton":
 			teaScreen.setVisible(true); break;
 			
 		}
