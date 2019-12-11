@@ -9,6 +9,7 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -18,7 +19,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PaneController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PaneController">
    <children>
       <TitledPane layoutX="667.0" layoutY="21.0" prefHeight="601.0" prefWidth="298.0">
          <content>
@@ -411,9 +412,12 @@
                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                 </rowConstraints>
                                  <children>
-                                    <RadioButton fx:id="small" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="63.0" prefWidth="170.0" text="SMALL" GridPane.columnIndex="1" />
-                                    <RadioButton fx:id="medium" mnemonicParsing="false" prefHeight="69.0" prefWidth="170.0" text="MEDIUM" GridPane.columnIndex="2" />
-                                    <RadioButton fx:id="large" mnemonicParsing="false" prefHeight="71.0" prefWidth="172.0" text="LARGE" GridPane.columnIndex="3" />
+                                    <RadioButton fx:id="small" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="63.0" prefWidth="170.0" selected="true" text="SMALL" GridPane.columnIndex="1">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="coffeeSize" />
+                                       </toggleGroup></RadioButton>
+                                    <RadioButton fx:id="medium" mnemonicParsing="false" prefHeight="69.0" prefWidth="170.0" text="MEDIUM" toggleGroup="$coffeeSize" GridPane.columnIndex="2" />
+                                    <RadioButton fx:id="large" mnemonicParsing="false" prefHeight="71.0" prefWidth="172.0" text="LARGE" toggleGroup="$coffeeSize" GridPane.columnIndex="3" />
                                  </children>
                               </GridPane>
                            </children>
@@ -526,7 +530,7 @@
                      <children>
                         <Button fx:id="Plus" layoutX="135.0" layoutY="1.0" mnemonicParsing="false" onAction="#toppingCount" prefHeight="96.0" prefWidth="135.0" text="+" />
                         <Button fx:id="Minus" layoutX="135.0" layoutY="96.0" mnemonicParsing="false" onAction="#toppingCount" prefHeight="96.0" prefWidth="135.0" text="-" />
-                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="-3.0" prefHeight="192.0" prefWidth="135.0" text="0" textFill="#54f206">
+                        <Label fx:id="coffeeQty" alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="-3.0" prefHeight="192.0" prefWidth="135.0" text="0" textFill="#54f206">
                            <font>
                               <Font size="48.0" />
                            </font>

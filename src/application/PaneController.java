@@ -10,6 +10,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import backEnd.Decorators.ToppingPrices;
@@ -26,10 +27,10 @@ public class PaneController {
 	private ChoiceBox coffeeChoice;
 	
 	@FXML
-	private Label halfHalf,milk,soyMilk,whipCream;
+	private Label halfHalf,milk,soyMilk,whipCream,coffeeQty;
 	
 	@FXML
-	private RadioButton small;
+	private ToggleGroup coffeeSize;
 	
 	@FXML
 	private ListView rec;
@@ -113,19 +114,25 @@ public class PaneController {
 		
 		coffee.spec = DrinkTypes.valueOf(((String)coffeeChoice.getValue()));
 		coffee.type = DrinkTypes.coffee;
-		coffee.size = Sizes.small;
+		coffee.size = Sizes.valueOf(((RadioButton)coffeeSize.getSelectedToggle()).getId());
 		
 		addToppings(coffee.toppings,Integer.parseInt(soyMilk.getText()),ToppingTypes.soyMilk);
 		addToppings(coffee.toppings,Integer.parseInt(halfHalf.getText()),ToppingTypes.halfHalf);
 		addToppings(coffee.toppings,Integer.parseInt(whipCream.getText()),ToppingTypes.whipCream);
 		
-		cart.add(d.createProduct(coffee));
+		addAmountToCart(Integer.parseInt(coffeeQty.getText()),d.createProduct(coffee));
 		updateRec();
 	}
 	
 	public void addToppings(ArrayList<ToppingTypes> t,int num,ToppingTypes topping) {
 		for(int i = 0;i<num;i++) {
 			t.add(topping);
+		}
+	}
+	
+	public void addAmountToCart(int num, Product x) {
+		for(int i = 0; i<num;i++) {
+			cart.add(x);
 		}
 	}
 	
