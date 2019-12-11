@@ -14,7 +14,7 @@ import backEnd.enums.*;
 public class PaneController {
 	
 	@FXML
-	private Pane coffeeScreen,teaScreen;
+	private Pane coffeeScreen,teaScreen,croissantScreen,cookieScreen,macaroonScreen;
 	
 	@FXML
 	private ChoiceBox coffeeChoice;
@@ -32,6 +32,9 @@ public class PaneController {
 	public void initialize() {
 		productScreenList.add(coffeeScreen);
 		productScreenList.add(teaScreen);
+		productScreenList.add(croissantScreen);
+		productScreenList.add(cookieScreen);
+		productScreenList.add(macaroonScreen);
 		//coffeeChoice.getItems().add(DrinkTypes.almondLatte.toString());
 	}
 	
@@ -44,7 +47,12 @@ public class PaneController {
 			coffeeScreen.setVisible(true); break;
 		case "TeaButton":
 			teaScreen.setVisible(true); break;
-			
+		case "CookieButton":
+			cookieScreen.setVisible(true); break;
+		case "CorsButton":
+			croissantScreen.setVisible(true); break;
+		case "MacButton":
+			macaroonScreen.setVisible(true); break;
 		}
 	}
 	
@@ -71,5 +79,8 @@ public class PaneController {
 		}
 
 	}
+	
+	
+	
 	
 }

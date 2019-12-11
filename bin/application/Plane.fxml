@@ -383,7 +383,7 @@
          <children>
             <Button id="CoffeeButton" fx:id="CoffeeButton" mnemonicParsing="false" onAction="#productButtonClicked" prefHeight="130.0" prefWidth="100.0" styleClass="CoffeeButton" stylesheets="@application.css" text="Coffee" />
             <Button fx:id="TeaButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#productButtonClicked" prefHeight="130.0" prefWidth="100.0" styleClass="TeaButton" stylesheets="@application.css" text="Tea" />
-            <Button fx:id="CrosButton" layoutX="10.0" layoutY="270.0" mnemonicParsing="false" onAction="#productButtonClicked" prefHeight="130.0" prefWidth="100.0" styleClass="CrosButton" stylesheets="@application.css" text="Croissant" />
+            <Button fx:id="CorsButton" layoutX="10.0" layoutY="270.0" mnemonicParsing="false" onAction="#productButtonClicked" prefHeight="130.0" prefWidth="100.0" styleClass="CrosButton" stylesheets="@application.css" text="Croissant" />
             <Button fx:id="CookieButton" layoutX="10.0" layoutY="400.0" mnemonicParsing="false" onAction="#productButtonClicked" prefHeight="130.0" prefWidth="100.0" styleClass="CookieButton" stylesheets="@application.css" text="Cookie" />
             <Button fx:id="MacButton" layoutX="10.0" layoutY="400.0" mnemonicParsing="false" onAction="#productButtonClicked" prefHeight="130.0" prefWidth="100.0" styleClass="macButton" stylesheets="@application.css" text="Macaroon" />
          </children>
