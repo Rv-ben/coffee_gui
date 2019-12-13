@@ -19,13 +19,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PaneController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1000.0" styleClass="mainBackground" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PaneController">
    <children>
       <TitledPane layoutX="667.0" layoutY="21.0" prefHeight="601.0" prefWidth="298.0">
          <content>
             <ListView fx:id="rec" prefHeight="200.0" prefWidth="200.0" />
          </content></TitledPane>
-      <Pane fx:id="teaScreen" layoutX="119.0" layoutY="31.0" prefHeight="594.0" prefWidth="543.0">
+      <Pane fx:id="teaScreen" layoutX="119.0" layoutY="31.0" prefHeight="594.0" prefWidth="543.0" visible="false">
          <children>
             <HBox prefHeight="100.0" prefWidth="532.0">
                <children>
@@ -396,7 +396,7 @@
             <Button fx:id="MacButton" layoutX="10.0" layoutY="400.0" mnemonicParsing="false" onAction="#productButtonClicked" prefHeight="130.0" prefWidth="100.0" styleClass="macButton" stylesheets="@application.css" text="Macaroon" />
          </children>
       </VBox>
-      <Pane fx:id="coffeeScreen" layoutX="110.0" layoutY="14.0" prefHeight="608.0" prefWidth="543.0" visible="false">
+      <Pane fx:id="coffeeScreen" layoutX="110.0" layoutY="14.0" prefHeight="608.0" prefWidth="543.0">
          <children>
             <HBox layoutX="14.0" layoutY="14.0" prefHeight="100.0" prefWidth="509.0">
                <children>
@@ -442,7 +442,7 @@
                   </TitledPane>
                </children>
             </HBox>
-            <GridPane fx:id="coffeeToppings" gridLinesVisible="true" layoutX="14.0" layoutY="214.0" prefHeight="130.0" prefWidth="509.0">
+            <GridPane fx:id="coffeeToppings" layoutX="14.0" layoutY="214.0" prefHeight="130.0" prefWidth="509.0">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -454,7 +454,7 @@
                 <RowConstraints maxHeight="65.0" minHeight="10.0" prefHeight="63.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="67.0" prefWidth="132.0" text="Milk">
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="67.0" prefWidth="132.0" styleClass="CoffeeMilkText" stylesheets="@application.css" text="Milk">
                      <font>
                         <Font size="15.0" />
                      </font>

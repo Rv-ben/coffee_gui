@@ -1,4 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap');
 
+.root {
+	-fx-background-image: url("chalkboard-background.jpg");
+	
+	-fx-background-color: black;
+	-fx-color: white;
+}
+
+.CoffeeMilkText{
+	-fx-color: white;
+	-fx-font-family: 'Fredericka the Great', cursive;
+	-fx-color: white;
+}
+
+.mainBackground {
+	-fx-background-image: url("chalkboard-background.jpeg");
+	
+	-fx-background-color: black;
+}
 
 .CoffeeButton{
 	background-image: none;
