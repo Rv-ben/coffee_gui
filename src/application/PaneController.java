@@ -26,19 +26,19 @@ public class PaneController {
 	private Pane coffeeScreen,teaScreen,croissantScreen,cookieScreen,macaroonScreen;
 	
 	@FXML
-	private GridPane coffeeToppings;
+	private GridPane coffeeToppings,teaToppings;
 	
 	@FXML
-	private ArrayList<Label> coffeeToppingLabels;
+	private ArrayList<Label> coffeeToppingLabels, teaToppingLabels;
 	
 	@FXML
-	private ChoiceBox coffeeChoice;
+	private ChoiceBox coffeeChoice,teaChoice;
 	
 	@FXML
-	private Label halfHalf,milk,soyMilk,whipCream,coffeeQty;
+	private Label coffeeQty,teaQty,sweetnessLabel;
 	
 	@FXML
-	private ToggleGroup coffeeSize;
+	private ToggleGroup coffeeSize,teaSize;
 	
 	@FXML
 	private ListView rec;
@@ -50,10 +50,6 @@ public class PaneController {
 	
 	private LoadHelper x = new LoadHelper();
 	
-	//Topping Labels
-	@FXML
-	private Label wholeMilkLabel,whipLabel,halfHalfLabel,soyMilkLabel;
-	
 	
 	private ArrayList<Pane> productScreenList = new ArrayList<Pane>();
 	
@@ -61,6 +57,7 @@ public class PaneController {
 	@FXML
 	public void initialize() {
 		x.loadCoffeeChoiceBox(coffeeChoice);
+		x.loadTeaChoiceBox(teaChoice);
 		
 		productScreenList.add(coffeeScreen);
 		productScreenList.add(teaScreen);
@@ -70,6 +67,7 @@ public class PaneController {
 		
 		
 		coffeeToppingLabels = x.getListOf(coffeeToppings.getChildren());
+		teaToppingLabels = x.getListOf(teaToppings.getChildren());
 		
 
         PastryPrices p = new PastryPrices();
@@ -121,6 +119,15 @@ public class PaneController {
 
 	}
 	
+	public void sweetnessCount(ActionEvent evt) {
+		Node source = (Node) evt.getSource();
+		
+		Label count = (Label)source.getParent().getChildrenUnmodifiable().get(2);
+		
+		int countVal = Integer.parseInt(count.getText());
+		
+	}
+	
 	public void addCoffeeToCart() {
 		Details coffee = new Details();
 		
@@ -131,6 +138,20 @@ public class PaneController {
 		addToppings(coffee.toppings,coffeeToppingLabels);
 		
 		addAmountToCart(Integer.parseInt(coffeeQty.getText()),d.createProduct(coffee));
+		updateRec();
+	}
+	
+	public void addTeaToCart() {
+		Details tea = new Details();
+		
+		tea.spec = DrinkTypes.valueOf((String)teaChoice.getValue());
+		tea.type = DrinkTypes.tea;
+		tea.size = Sizes.valueOf(((RadioButton)teaSize.getSelectedToggle()).getId());
+		tea.sweetness = Integer.parseInt((sweetnessLabel.getText()));
+		
+		addToppings(tea.toppings,teaToppingLabels);
+		
+		addAmountToCart(Integer.parseInt(teaQty.getText()),d.createProduct(tea));
 		updateRec();
 	}
 	

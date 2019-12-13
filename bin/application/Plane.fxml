@@ -25,7 +25,7 @@
          <content>
             <ListView fx:id="rec" prefHeight="200.0" prefWidth="200.0" />
          </content></TitledPane>
-      <Pane fx:id="teaScreen" layoutX="119.0" layoutY="31.0" prefHeight="594.0" prefWidth="543.0" visible="false">
+      <Pane fx:id="teaScreen" layoutX="119.0" layoutY="31.0" prefHeight="594.0" prefWidth="543.0">
          <children>
             <HBox prefHeight="100.0" prefWidth="532.0">
                <children>
@@ -43,9 +43,12 @@
                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                 </rowConstraints>
                                  <children>
-                                    <RadioButton mnemonicParsing="false" text="Small" />
-                                    <RadioButton mnemonicParsing="false" text="Medium" GridPane.columnIndex="1" />
-                                    <RadioButton mnemonicParsing="false" text="Large" GridPane.columnIndex="2" />
+                                    <RadioButton fx:id="small" mnemonicParsing="false" text="Small">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="teaSize" />
+                                       </toggleGroup></RadioButton>
+                                    <RadioButton fx:id="medium" mnemonicParsing="false" text="Medium" toggleGroup="$teaSize" GridPane.columnIndex="1" />
+                                    <RadioButton fx:id="large" mnemonicParsing="false" text="Large" toggleGroup="$teaSize" GridPane.columnIndex="2" />
                                  </children>
                               </GridPane>
                            </children>
@@ -65,7 +68,7 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <ChoiceBox prefHeight="31.0" prefWidth="271.0" GridPane.rowIndex="1" />
+                        <ChoiceBox fx:id="teaChoice" prefHeight="31.0" prefWidth="271.0" GridPane.rowIndex="1" />
                         <Label text="            Select Tea Type">
                            <font>
                               <Font size="22.0" />
@@ -102,7 +105,7 @@
                   </GridPane>
                </children>
             </HBox>
-            <GridPane gridLinesVisible="true" layoutY="214.0" prefHeight="258.0" prefWidth="543.0">
+            <GridPane fx:id="teaToppings" gridLinesVisible="true" layoutY="214.0" prefHeight="258.0" prefWidth="543.0">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -158,7 +161,7 @@
                               <Font />
                            </font>
                         </Button>
-                        <Label fx:id="amountLabel1" alignment="CENTER" layoutX="-1.0" layoutY="-2.0" prefHeight="55.0" prefWidth="70.0" text="0" textFill="#1dff04">
+                        <Label fx:id="halfHalf" alignment="CENTER" layoutX="-1.0" layoutY="-2.0" prefHeight="55.0" prefWidth="70.0" text="0" textFill="#1dff04">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -182,7 +185,7 @@
                               <Font />
                            </font>
                         </Button>
-                        <Label fx:id="amountLabel2" alignment="CENTER" layoutX="-1.0" layoutY="-2.0" prefHeight="55.0" prefWidth="70.0" text="0" textFill="#1dff04">
+                        <Label fx:id="soyMilk" alignment="CENTER" layoutX="-1.0" layoutY="-2.0" prefHeight="55.0" prefWidth="70.0" text="0" textFill="#1dff04">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -206,7 +209,7 @@
                               <Font />
                            </font>
                         </Button>
-                        <Label fx:id="amountLabel21" alignment="CENTER" layoutX="-1.0" layoutY="-2.0" prefHeight="55.0" prefWidth="70.0" text="0" textFill="#1dff04">
+                        <Label fx:id="boba" alignment="CENTER" layoutX="-1.0" layoutY="-2.0" prefHeight="55.0" prefWidth="70.0" text="0" textFill="#1dff04">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -230,7 +233,7 @@
                               <Font />
                            </font>
                         </Button>
-                        <Label fx:id="amountLabel211" alignment="CENTER" layoutX="-1.0" layoutY="-2.0" prefHeight="55.0" prefWidth="70.0" text="0" textFill="#1dff04">
+                        <Label fx:id="poppingBoba" alignment="CENTER" layoutX="-1.0" layoutY="-2.0" prefHeight="55.0" prefWidth="70.0" text="0" textFill="#1dff04">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -254,7 +257,7 @@
                               <Font />
                            </font>
                         </Button>
-                        <Label fx:id="amountLabel2111" alignment="CENTER" layoutX="-1.0" layoutY="-2.0" prefHeight="55.0" prefWidth="70.0" text="0" textFill="#1dff04">
+                        <Label fx:id="grassJelly" alignment="CENTER" layoutX="-1.0" layoutY="-2.0" prefHeight="55.0" prefWidth="70.0" text="0" textFill="#1dff04">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -278,7 +281,7 @@
                               <Font />
                            </font>
                         </Button>
-                        <Label fx:id="amountLabel21111" alignment="CENTER" layoutX="-1.0" layoutY="-2.0" prefHeight="55.0" prefWidth="70.0" text="0" textFill="#1dff04">
+                        <Label fx:id="lycheeJelly" alignment="CENTER" layoutX="-1.0" layoutY="-2.0" prefHeight="55.0" prefWidth="70.0" text="0" textFill="#1dff04">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -302,7 +305,7 @@
                               <Font />
                            </font>
                         </Button>
-                        <Label fx:id="amountLabel211111" alignment="CENTER" layoutX="-1.0" layoutY="-2.0" prefHeight="55.0" prefWidth="70.0" text="0" textFill="#1dff04">
+                        <Label fx:id="passionFruitJelly" alignment="CENTER" layoutX="-1.0" layoutY="-2.0" prefHeight="55.0" prefWidth="70.0" text="0" textFill="#1dff04">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -326,7 +329,7 @@
                               <Font />
                            </font>
                         </Button>
-                        <Label fx:id="amountLabel2111111" alignment="CENTER" layoutX="-1.0" layoutY="-2.0" prefHeight="55.0" prefWidth="70.0" text="0" textFill="#1dff04">
+                        <Label fx:id="coconutJelly" alignment="CENTER" layoutX="-1.0" layoutY="-2.0" prefHeight="55.0" prefWidth="70.0" text="0" textFill="#1dff04">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -350,7 +353,7 @@
                               <Font />
                            </font>
                         </Button>
-                        <Label fx:id="amountLabel21111111" alignment="CENTER" layoutX="-1.0" layoutY="-2.0" prefHeight="55.0" prefWidth="70.0" text="0" textFill="#1dff04">
+                        <Label fx:id="freshStrawberry" alignment="CENTER" layoutX="-1.0" layoutY="-2.0" prefHeight="55.0" prefWidth="70.0" text="0" textFill="#1dff04">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -361,16 +364,16 @@
             </GridPane>
             <HBox layoutY="472.0" prefHeight="121.0" prefWidth="542.0">
                <children>
-                  <Label prefHeight="122.0" prefWidth="273.0" text="ADD TO CART">
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#addTeaToCart" prefHeight="146.0" prefWidth="270.0" text="Add To Cart">
                      <font>
-                        <Font size="40.0" />
+                        <Font size="35.0" />
                      </font>
-                  </Label>
+                  </Button>
                   <Pane prefHeight="121.0" prefWidth="272.0">
                      <children>
                         <Button fx:id="Minus" layoutX="138.0" layoutY="61.0" mnemonicParsing="false" onAction="#toppingCount" prefHeight="60.0" prefWidth="135.0" text="-" />
                         <Button fx:id="Plus" layoutX="138.0" layoutY="1.0" mnemonicParsing="false" onAction="#toppingCount" prefHeight="60.0" prefWidth="135.0" text="+" />
-                        <Label fx:id="amountLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="121.0" prefWidth="138.0" text="0" textFill="#1af202">
+                        <Label fx:id="teaQty" alignment="CENTER" contentDisplay="CENTER" prefHeight="121.0" prefWidth="138.0" text="0" textFill="#1af202">
                            <font>
                               <Font size="64.0" />
                            </font>
@@ -393,7 +396,7 @@
             <Button fx:id="MacButton" layoutX="10.0" layoutY="400.0" mnemonicParsing="false" onAction="#productButtonClicked" prefHeight="130.0" prefWidth="100.0" styleClass="macButton" stylesheets="@application.css" text="Macaroon" />
          </children>
       </VBox>
-      <Pane fx:id="coffeeScreen" layoutX="110.0" layoutY="14.0" prefHeight="608.0" prefWidth="543.0">
+      <Pane fx:id="coffeeScreen" layoutX="110.0" layoutY="14.0" prefHeight="608.0" prefWidth="543.0" visible="false">
          <children>
             <HBox layoutX="14.0" layoutY="14.0" prefHeight="100.0" prefWidth="509.0">
                <children>

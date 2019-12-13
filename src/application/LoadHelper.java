@@ -20,6 +20,11 @@ public class LoadHelper {
 			coffee.getItems().add(DrinkTypes.hazelnutLatte.toString());
 			coffee.getItems().add(DrinkTypes.pumpkinSpiceLatte.toString());
 	}
+	public void loadTeaChoiceBox(ChoiceBox tea) {
+		tea.getItems().add(DrinkTypes.jasmineGreenTea.toString());
+		tea.getItems().add(DrinkTypes.milkTea.toString());
+		tea.getItems().add(DrinkTypes.summerMintTea.toString());
+	}
 	
 	
 	public  ArrayList<Label> getListOf(ObservableList<Node> observableList){
