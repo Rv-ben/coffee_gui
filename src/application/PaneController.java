@@ -1,6 +1,7 @@
 package application;
 
 import java.util.ArrayList;
+import java.util.function.Predicate;
 
 import javafx.event.*;
 import javafx.fxml.FXML;
@@ -11,6 +12,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import backEnd.Decorators.ToppingPrices;
@@ -22,6 +24,12 @@ public class PaneController {
 	
 	@FXML
 	private Pane coffeeScreen,teaScreen,croissantScreen,cookieScreen,macaroonScreen;
+	
+	@FXML
+	private GridPane coffeeToppings;
+	
+	@FXML
+	private ArrayList<Label> coffeeToppingLabels;
 	
 	@FXML
 	private ChoiceBox coffeeChoice;
@@ -59,6 +67,10 @@ public class PaneController {
 		productScreenList.add(croissantScreen);
 		productScreenList.add(cookieScreen);
 		productScreenList.add(macaroonScreen);
+		
+		
+		coffeeToppingLabels = x.getListOf(coffeeToppings.getChildren());
+		
 
         PastryPrices p = new PastryPrices();
         ToppingPrices t = new ToppingPrices();
@@ -116,17 +128,17 @@ public class PaneController {
 		coffee.type = DrinkTypes.coffee;
 		coffee.size = Sizes.valueOf(((RadioButton)coffeeSize.getSelectedToggle()).getId());
 		
-		addToppings(coffee.toppings,Integer.parseInt(soyMilk.getText()),ToppingTypes.soyMilk);
-		addToppings(coffee.toppings,Integer.parseInt(halfHalf.getText()),ToppingTypes.halfHalf);
-		addToppings(coffee.toppings,Integer.parseInt(whipCream.getText()),ToppingTypes.whipCream);
+		addToppings(coffee.toppings,coffeeToppingLabels);
 		
 		addAmountToCart(Integer.parseInt(coffeeQty.getText()),d.createProduct(coffee));
 		updateRec();
 	}
 	
-	public void addToppings(ArrayList<ToppingTypes> t,int num,ToppingTypes topping) {
-		for(int i = 0;i<num;i++) {
-			t.add(topping);
+	public void addToppings(ArrayList<ToppingTypes> t,ArrayList<Label> labels) {
+		for(Label i:labels) {
+			for(int j = 0; j < Integer.parseInt(i.getText()); j++) {
+				t.add(ToppingTypes.valueOf(i.getId()));
+			}
 		}
 	}
 	
@@ -145,6 +157,8 @@ public class PaneController {
 			rec.getItems().add(i.getDescription()+ "                                         "+ i.getCost());
 		}
 	}
+	
+	
 	
 
 }
