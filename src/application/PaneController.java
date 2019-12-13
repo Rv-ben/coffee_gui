@@ -17,6 +17,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import backEnd.Decorators.ToppingPrices;
 import backEnd.Factories.DrinkFactory;
+import backEnd.Factories.PastryFactory;
 import backEnd.Products.PastryPrices;
 import backEnd.Products.Product;
 import backEnd.enums.*;
@@ -32,19 +33,24 @@ public class PaneController {
 	private ArrayList<Label> coffeeToppingLabels, teaToppingLabels;
 	
 	@FXML
-	private ChoiceBox coffeeChoice,teaChoice;
+	private ChoiceBox coffeeChoice,teaChoice,macChoice,cookieChoice,corsChoice;
 	
 	@FXML
-	private Label coffeeQty,teaQty,sweetnessLabel;
+	private Label coffeeQty,teaQty,sweetnessLabel,corsQty,cookieQty,macQty;
 	
 	@FXML
 	private ToggleGroup coffeeSize,teaSize;
+	
+	@FXML
+	private RadioButton heatedCors;
 	
 	@FXML
 	private ListView rec;
 	
 	@FXML
 	private DrinkFactory d  = new DrinkFactory();
+	
+	private PastryFactory pf = new PastryFactory();
 	
 	private ArrayList<Product> cart = new ArrayList<Product>();
 	
@@ -58,6 +64,9 @@ public class PaneController {
 	public void initialize() {
 		x.loadCoffeeChoiceBox(coffeeChoice);
 		x.loadTeaChoiceBox(teaChoice);
+		x.loadCorsChoiceBox(corsChoice);
+		x.loadMacChoiceBox(macChoice);
+		x.loadCookieChoiceBox(cookieChoice);
 		
 		productScreenList.add(coffeeScreen);
 		productScreenList.add(teaScreen);
@@ -154,6 +163,29 @@ public class PaneController {
 		addAmountToCart(Integer.parseInt(teaQty.getText()),d.createProduct(tea));
 		updateRec();
 	}
+	
+	public void addCorsToCart() {
+		Details cors = new Details();
+		
+		cors.heated = heatedCors.isSelected();
+		
+		cors.pType = PastryTypes.croissant;
+		cors.special = PastryTypes.valueOf((String)corsChoice.getValue());
+		
+		addAmountToCart(Integer.parseInt(corsQty.getText()),pf.createProduct(cors));
+		
+	}
+	
+	public void addCookieToCart() {
+		Details cookie = new Details();
+		
+		cookie.pType = PastryTypes.cookie;
+		cookie.special = PastryTypes.valueOf((String)cookieChoice.getValue());
+		
+		addAmountToCart(Integer.parseInt(cookieQty.getText()),pf.createProduct(cookie));
+	}
+	
+	
 	
 	public void addToppings(ArrayList<ToppingTypes> t,ArrayList<Label> labels) {
 		for(Label i:labels) {

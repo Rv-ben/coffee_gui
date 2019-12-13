@@ -15,15 +15,26 @@ public class LoadHelper {
 	
 	@SuppressWarnings("unchecked")
 	public void loadCoffeeChoiceBox(ChoiceBox coffee) {
-			coffee.getItems().add(DrinkTypes.darkRoast.toString());
-			coffee.getItems().add(DrinkTypes.almondLatte.toString());
-			coffee.getItems().add(DrinkTypes.hazelnutLatte.toString());
-			coffee.getItems().add(DrinkTypes.pumpkinSpiceLatte.toString());
+		coffee.getItems().add(DrinkTypes.darkRoast.toString());
+		coffee.getItems().add(DrinkTypes.almondLatte.toString());
+		coffee.getItems().add(DrinkTypes.hazelnutLatte.toString());
+		coffee.getItems().add(DrinkTypes.pumpkinSpiceLatte.toString());
 	}
 	public void loadTeaChoiceBox(ChoiceBox tea) {
 		tea.getItems().add(DrinkTypes.jasmineGreenTea.toString());
 		tea.getItems().add(DrinkTypes.milkTea.toString());
 		tea.getItems().add(DrinkTypes.summerMintTea.toString());
+	}
+	public void loadCorsChoiceBox(ChoiceBox cors) {
+		cors.getItems().add(PastryTypes.chocolateNut.toString());
+		cors.getItems().add(PastryTypes.plain.toString());
+	}
+	public void loadCookieChoiceBox(ChoiceBox cookie) {
+		cookie.getItems().add(PastryTypes.oatmeal.toString());
+		cookie.getItems().add(PastryTypes.variety.toString());
+	}
+	public void loadMacChoiceBox(ChoiceBox mac) {
+		mac.getItems().add(PastryTypes.variety.toString());
 	}
 	
 	
