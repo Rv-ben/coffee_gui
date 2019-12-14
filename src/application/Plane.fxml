@@ -78,7 +78,7 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="121.0" prefWidth="160.0" text="Sweetness">
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="121.0" prefWidth="160.0" styleClass="teaToppings" stylesheets="@application.css" text="Sweetness">
                            <font>
                               <Font size="24.0" />
                            </font>
@@ -522,7 +522,7 @@
             </GridPane>
             <VBox layoutX="21.0" layoutY="106.0" prefHeight="96.0" prefWidth="499.0">
                <children>
-                  <Label prefHeight="45.0" prefWidth="499.0" text="Select Coffee Type" />
+                  <Label prefHeight="45.0" prefWidth="499.0" styleClass="teaToppings" stylesheets="@application.css" text="Select Coffee Type" />
                   <ChoiceBox fx:id="coffeeChoice" prefHeight="27.0" prefWidth="504.0" styleClass="selectTypeBox" stylesheets="@application.css" />
                </children>
             </VBox>
@@ -560,24 +560,9 @@
                </children>
             </GridPane>
             <TitledPane animated="false" layoutX="14.0" layoutY="214.0" prefHeight="100.0" prefWidth="510.0" text="SIZE">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <GridPane layoutY="3.0" prefHeight="66.0" prefWidth="508.0">
-                           <columnConstraints>
-                              <ColumnConstraints />
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                           <children>
-                              <RadioButton fx:id="heatedCors" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="66.0" prefWidth="506.0" text="Heated" GridPane.columnIndex="1" />
-                           </children>
-                        </GridPane>
-                     </children>
-                  </AnchorPane>
-               </content>
+               <graphic>
+                  <RadioButton fx:id="heatedCors" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="66.0" prefWidth="506.0" text="Heated" />
+               </graphic>
             </TitledPane>
          </children>
       </Pane>
@@ -586,15 +571,7 @@
             <HBox layoutX="14.0" layoutY="14.0" prefHeight="100.0" prefWidth="509.0" />
             <HBox layoutX="14.0" layoutY="114.0" prefHeight="100.0" prefWidth="510.0">
                <children>
-                  <TitledPane animated="false" prefHeight="100.0" prefWidth="513.0" text="SELECTED COOKIE TYPE">
-                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                           <children>
-                              <ChoiceBox fx:id="cookieChoice" layoutX="79.0" layoutY="23.0" prefHeight="27.0" prefWidth="339.0" styleClass="selectTypeBox" stylesheets="@application.css" />
-                           </children>
-                        </AnchorPane>
-                     </content>
-                  </TitledPane>
+                  <ChoiceBox fx:id="cookieChoice" prefHeight="27.0" prefWidth="339.0" styleClass="selectTypeBox" stylesheets="@application.css" />
                </children>
             </HBox>
             <GridPane gridLinesVisible="true" layoutY="415.0" prefHeight="192.0" prefWidth="542.0">
@@ -627,15 +604,7 @@
             <HBox layoutX="14.0" layoutY="14.0" prefHeight="100.0" prefWidth="509.0" />
             <HBox layoutX="14.0" layoutY="114.0" prefHeight="100.0" prefWidth="510.0">
                <children>
-                  <TitledPane animated="false" prefHeight="100.0" prefWidth="513.0" text="SELECTED MACAROON TYPE">
-                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                           <children>
-                              <ChoiceBox fx:id="macChoice" layoutX="79.0" layoutY="23.0" prefHeight="27.0" prefWidth="339.0" styleClass="selectTypeBox" stylesheets="@application.css" />
-                           </children>
-                        </AnchorPane>
-                     </content>
-                  </TitledPane>
+                  <ChoiceBox fx:id="macChoice" prefHeight="27.0" prefWidth="339.0" styleClass="selectTypeBox" stylesheets="@application.css" />
                </children>
             </HBox>
             <GridPane gridLinesVisible="true" layoutY="415.0" prefHeight="192.0" prefWidth="542.0">
