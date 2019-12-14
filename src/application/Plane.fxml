@@ -364,7 +364,7 @@
             </GridPane>
             <HBox layoutY="472.0" prefHeight="121.0" prefWidth="542.0">
                <children>
-                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#addTeaToCart" prefHeight="146.0" prefWidth="270.0" text="Add To Cart">
+                  <Button id="addToCartButton" alignment="CENTER" mnemonicParsing="false" onAction="#addTeaToCart" prefHeight="146.0" prefWidth="270.0" styleClass="addToCartButton" stylesheets="@application.css" text="Add To Cart">
                      <font>
                         <Font size="35.0" />
                      </font>
@@ -389,11 +389,11 @@
       </Pane>
       <VBox prefHeight="650.0" prefWidth="101.0">
          <children>
-            <Button id="CoffeeButton" fx:id="CoffeeButton" mnemonicParsing="false" onAction="#productButtonClicked" prefHeight="130.0" prefWidth="100.0" styleClass="CoffeeButton" stylesheets="@application.css" text="Coffee" />
-            <Button fx:id="TeaButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#productButtonClicked" prefHeight="130.0" prefWidth="100.0" styleClass="TeaButton" stylesheets="@application.css" text="Tea" />
-            <Button fx:id="CorsButton" layoutX="10.0" layoutY="270.0" mnemonicParsing="false" onAction="#productButtonClicked" prefHeight="130.0" prefWidth="100.0" styleClass="CrosButton" stylesheets="@application.css" text="Croissant" />
-            <Button fx:id="CookieButton" layoutX="10.0" layoutY="400.0" mnemonicParsing="false" onAction="#productButtonClicked" prefHeight="130.0" prefWidth="100.0" styleClass="CookieButton" stylesheets="@application.css" text="Cookie" />
-            <Button fx:id="MacButton" layoutX="10.0" layoutY="400.0" mnemonicParsing="false" onAction="#productButtonClicked" prefHeight="130.0" prefWidth="100.0" styleClass="macButton" stylesheets="@application.css" text="Macaroon" />
+            <Button id="CoffeeButton" fx:id="CoffeeButton" mnemonicParsing="false" onAction="#productButtonClicked" prefHeight="130.0" prefWidth="100.0" styleClass="CoffeeButton" stylesheets="@application.css" />
+            <Button fx:id="TeaButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#productButtonClicked" prefHeight="130.0" prefWidth="100.0" styleClass="TeaButton" stylesheets="@application.css" />
+            <Button fx:id="CorsButton" layoutX="10.0" layoutY="270.0" mnemonicParsing="false" onAction="#productButtonClicked" prefHeight="130.0" prefWidth="100.0" styleClass="CrosButton" stylesheets="@application.css" />
+            <Button fx:id="CookieButton" layoutX="10.0" layoutY="400.0" mnemonicParsing="false" onAction="#productButtonClicked" prefHeight="130.0" prefWidth="100.0" styleClass="CookieButton" stylesheets="@application.css" />
+            <Button fx:id="MacButton" layoutX="10.0" layoutY="400.0" mnemonicParsing="false" onAction="#productButtonClicked" prefHeight="130.0" prefWidth="100.0" styleClass="macButton" stylesheets="@application.css" />
          </children>
       </VBox>
       <Pane fx:id="coffeeScreen" layoutX="110.0" layoutY="14.0" prefHeight="608.0" prefWidth="543.0" visible="false">
@@ -585,7 +585,7 @@
                         </Label>
                      </children>
                   </Pane>
-                  <Button mnemonicParsing="false" onAction="#addCorsToCart" prefHeight="211.0" prefWidth="285.0" text="Add To Cart" />
+                  <Button id="addToCartButton" mnemonicParsing="false" onAction="#addCorsToCart" prefHeight="211.0" prefWidth="285.0" styleClass="addToCartButton" stylesheets="@application.css" text="Add To Cart" />
                </children>
             </GridPane>
             <TitledPane animated="false" layoutX="14.0" layoutY="214.0" prefHeight="100.0" prefWidth="510.0" text="SIZE">
@@ -646,7 +646,7 @@
                         </Label>
                      </children>
                   </Pane>
-                  <Button mnemonicParsing="false" onAction="#addCookieToCart" prefHeight="201.0" prefWidth="439.0" text="Add to Cart" />
+                  <Button id="addToCartButton" mnemonicParsing="false" onAction="#addCookieToCart" prefHeight="201.0" prefWidth="439.0" styleClass="addToCartButton" stylesheets="@application.css" text="Add to Cart" />
                </children>
             </GridPane>
          </children>
@@ -687,7 +687,7 @@
                         </Label>
                      </children>
                   </Pane>
-                  <Button mnemonicParsing="false" onAction="#addMacToCart" prefHeight="293.0" prefWidth="345.0" text="Add to Cart" />
+                  <Button id="addToCartButton" mnemonicParsing="false" onAction="#addMacToCart" prefHeight="293.0" prefWidth="345.0" styleClass="addToCartButton" stylesheets="@application.css" text="Add to Cart" />
                </children>
             </GridPane>
          </children>
