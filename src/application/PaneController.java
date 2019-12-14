@@ -187,6 +187,17 @@ public class PaneController {
 		addAmountToCart(Integer.parseInt(cookieQty.getText()),pf.createProduct(cookie));
 	}
 	
+	public void addMacToCart() {
+		Details mac = new Details();
+		
+		mac.pType = PastryTypes.macaroon;
+		mac.special = PastryTypes.valueOf((String)macChoice.getValue());
+		
+		addAmountToCart(Integer.parseInt(macQty.getText()),pf.createProduct(mac));
+		
+		
+	}
+	
 	
 	
 	public void addToppings(ArrayList<ToppingTypes> t,ArrayList<Label> labels) {
