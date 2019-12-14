@@ -164,6 +164,8 @@ public class PaneController {
 		updateRec();
 	}
 	
+	//test
+	
 	public void addCorsToCart() {
 		Details cors = new Details();
 		
