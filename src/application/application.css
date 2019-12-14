@@ -3,6 +3,7 @@
 .root {
 	-fx-background-image: url("https://img.freepik.com/free-photo/black-chalk-board-texture_89245-170.jpg?size=626&ext=jpg");
 	-fx-background-color: black;
+	-fx-font-family: 'Fredericka the Great', cursive;
 	-fx-color: white;
 }
 
@@ -17,36 +18,74 @@
 	-fx-background-color: black;
 }
 
-.CoffeeButton{
+.tabButton{
+	-fx-font-size: 130%;
+	-fx-text-fill: white;
+	-fx-background-color: rgba(0, 0, 0, 0);
+	-fx-font-family: 'Fredericka the Great', cursive;
 	background-image: none;
 	background-size: auto;
 	-fx-background-size: 100% 100%;
 }
 
-.TeaButton{
-	background-image: none;
-	background-size: auto;
-	-fx-background-size: 100% 100%;
-}
 
-.CrosButton{
-	background-image: none;
-	background-size: auto;
-	-fx-background-size: 100% 100%;
-}
-
-.CookieButton{
-	background-image: none;
-	background-size: auto;
-	-fx-background-size: 100% 100%;
-}
-
-.macButton{
+.teaToppings {
+	-fx-font-size: 100%;
+	-fx-text-fill: white;
+	-fx-background-color: rgba(0, 0, 0, 0);
+	-fx-font-family: 'Fredericka the Great', cursive;
 	background-image: none;
 	background-size: auto;
 	-fx-background-size: 100% 100%;
 }
 
 .Minus{
-	-fx-background-color: green;
+	-fx-background-color: white;
+}
+
+
+.sizeBox {
+	-fx-font-size: 100%;
+	-fx-text-fill: white;
+	-fx-background-color: rgba(0, 0, 0, 0);
+	-fx-font-family: 'Fredericka the Great', cursive;
+	background-image: none;
+	background-size: auto;
+	-fx-background-size: 100% 100%;
+}
+
+.smlButtons {
+	-fx-font-size: 100%;
+	-fx-text-fill: white;
+	-fx-background-color: rgba(0, 0, 0, 0);
+	-fx-font-family: 'Fredericka the Great', cursive;
+	background-image: none;
+	background-size: auto;
+	-fx-background-size: 100% 100%;
+}
+
+.selectTypeBox {
+	-fx-font-size: 100%;
+	-fx-text-fill: white;
+	-fx-background-color: rgba(255,255,255, 0.3);
+	-fx-font-family: 'Fredericka the Great', cursive;
+	background-image: none;
+	background-size: auto;
+	-fx-background-size: 100% 100%;
+}
+
+.uniBackground {
+	-fx-background-color: rgba(0, 0, 0, 0);
+}
+
+
+
+.addToCartButton {
+	-fx-font-size: 30px;
+	-fx-text-fill: white;
+	-fx-background-color: rgba(0, 0, 0, 0);
+	-fx-font-family: 'Fredericka the Great', cursive;
+	background-image: none;
+	background-size: auto;
+	-fx-background-size: 100% 100%;
 }
