@@ -389,7 +389,7 @@
       </Pane>
       <VBox prefHeight="650.0" prefWidth="101.0">
          <children>
-            <Button id="tabButton" fx:id="CoffeeButton" mnemonicParsing="false" onAction="#productButtonClicked" prefHeight="130.0" prefWidth="100.0" styleClass="tabButton" stylesheets="@application.css" text="Coffee" />
+            <Button id="coffeeButton" fx:id="CoffeeButton" mnemonicParsing="false" onAction="#productButtonClicked" prefHeight="130.0" prefWidth="100.0" styleClass="coffeeButton" stylesheets="@application.css" text="Coffee" />
             <Button id="tabButton" fx:id="TeaButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#productButtonClicked" prefHeight="130.0" prefWidth="100.0" styleClass="tabButton" stylesheets="@application.css" text="Tea" />
             <Button id="tabButton" fx:id="CorsButton" layoutX="10.0" layoutY="270.0" mnemonicParsing="false" onAction="#productButtonClicked" prefHeight="130.0" prefWidth="100.0" styleClass="tabButton" stylesheets="@application.css" text="Croissant" />
             <Button id="tabButton" fx:id="CookieButton" layoutX="10.0" layoutY="400.0" mnemonicParsing="false" onAction="#productButtonClicked" prefHeight="130.0" prefWidth="100.0" styleClass="tabButton" stylesheets="@application.css" text="Cookie" />
