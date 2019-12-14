@@ -400,33 +400,26 @@
          <children>
             <HBox layoutX="14.0" layoutY="14.0" prefHeight="100.0" prefWidth="509.0">
                <children>
-                  <TitledPane animated="false" prefHeight="100.0" prefWidth="510.0" styleClass="sizeBox" stylesheets="@application.css" text="SIZE">
-                    <content>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="uniBackground" stylesheets="@application.css" visible="false">
-                           <children>
-                              <GridPane layoutY="3.0" prefHeight="66.0" prefWidth="508.0">
-                                <columnConstraints>
-                                  <ColumnConstraints />
-                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                </columnConstraints>
-                                <rowConstraints>
-                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                </rowConstraints>
-                                 <children>
-                                    <RadioButton fx:id="small" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="63.0" prefWidth="170.0" selected="true" styleClass="smlButtons" stylesheets="@application.css" text="SMALL" GridPane.columnIndex="1">
-                                       <toggleGroup>
-                                          <ToggleGroup fx:id="coffeeSize" />
-                                       </toggleGroup></RadioButton>
-                                    <RadioButton fx:id="medium" mnemonicParsing="false" prefHeight="69.0" prefWidth="170.0" styleClass="smlButtons" stylesheets="@application.css" text="MEDIUM" toggleGroup="$coffeeSize" GridPane.columnIndex="2" />
-                                    <RadioButton fx:id="large" mnemonicParsing="false" prefHeight="71.0" prefWidth="172.0" styleClass="smlButtons" stylesheets="@application.css" text="LARGE" toggleGroup="$coffeeSize" GridPane.columnIndex="3" />
-                                 </children>
-                              </GridPane>
-                           </children>
-                        </AnchorPane>
-                    </content>
-                  </TitledPane>
+                  <GridPane prefHeight="66.0" prefWidth="508.0">
+                    <columnConstraints>
+                      <ColumnConstraints />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <RadioButton fx:id="small" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="63.0" prefWidth="170.0" selected="true" styleClass="smlButtons" stylesheets="@application.css" text="SMALL" GridPane.columnIndex="1">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="coffeeSize" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="medium" mnemonicParsing="false" prefHeight="69.0" prefWidth="170.0" styleClass="smlButtons" stylesheets="@application.css" text="MEDIUM" toggleGroup="$coffeeSize" GridPane.columnIndex="2" />
+                        <RadioButton fx:id="large" mnemonicParsing="false" prefHeight="71.0" prefWidth="172.0" styleClass="smlButtons" stylesheets="@application.css" text="LARGE" toggleGroup="$coffeeSize" GridPane.columnIndex="3" />
+                     </children>
+                  </GridPane>
                </children>
             </HBox>
             <HBox layoutX="14.0" layoutY="114.0" prefHeight="100.0" prefWidth="510.0">
