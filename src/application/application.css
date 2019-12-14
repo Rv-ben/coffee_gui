@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap');
 
 .root {
-	-fx-background-image: url("chalkboard-background.jpg");
+	-fx-background-image: url("https://img.freepik.com/free-photo/black-chalk-board-texture_89245-170.jpg?size=626&ext=jpg");
 	-fx-background-color: black;
 	-fx-color: white;
 }
 
 .CoffeeMilkText{
-	-fx-color: white;
+	-fx-text-fill: white;
 	-fx-font-family: 'Fredericka the Great', cursive;
 }
 
 .mainBackground {
-	-fx-background-image: url("chalkboard-background.jpeg");
+	-fx-background-image: url("https://img.freepik.com/free-photo/black-chalk-board-texture_89245-170.jpg?size=626&ext=jpg");
 	
 	-fx-background-color: black;
 }
