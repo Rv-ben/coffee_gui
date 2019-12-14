@@ -11,7 +11,6 @@ import backEnd.Products.Product;
 public class Receipt{
 	
     ArrayList<Product> listOfProducts;
-    ArrayList<Receipt> listOfReceipt;
 
     public double subTotal=0,total=0,tax = 1;
 
@@ -39,7 +38,6 @@ public class Receipt{
     	final double PASTRY_DISCOUNT = -1;
     	final double GENERAL_DISCOUNT = -2;
         double productPrice, drinkDiscountPrice;
-        listOfReceipt = new ArrayList<Receipt>();
         
         //listOfProducts.get(0).getName();  //create a method "getName" in product+++++++++++++++++++++++++++++++++
         

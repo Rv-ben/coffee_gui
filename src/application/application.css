@@ -19,7 +19,7 @@
 }
 
 .tabButton{
-	-fx-font-size: 130%;
+	-fx-font-size: 100%;
 	-fx-text-fill: white;
 	-fx-background-color: rgba(0, 0, 0, 0);
 	-fx-font-family: 'Fredericka the Great', cursive;
@@ -30,7 +30,7 @@
 
 
 .teaToppings {
-	-fx-font-size: 100%;
+	-fx-font-size: 130%;
 	-fx-text-fill: white;
 	-fx-background-color: rgba(0, 0, 0, 0);
 	-fx-font-family: 'Fredericka the Great', cursive;
