@@ -427,7 +427,7 @@
                 <RowConstraints maxHeight="65.0" minHeight="10.0" prefHeight="63.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="67.0" prefWidth="132.0" styleClass="CoffeeMilkText" stylesheets="@application.css" text="Milk">
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="67.0" prefWidth="132.0" styleClass="teaToppings" stylesheets="@application.css" text="Milk">
                      <font>
                         <Font size="15.0" />
                      </font>
@@ -443,7 +443,7 @@
                         </Label>
                      </children>
                   </Pane>
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="71.0" prefWidth="137.0" text="Half and Half" GridPane.rowIndex="1">
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="71.0" prefWidth="137.0" styleClass="teaToppings" stylesheets="@application.css" text="Half and Half" GridPane.rowIndex="1">
                      <font>
                         <Font size="15.0" />
                      </font>
@@ -459,7 +459,7 @@
                         </Label>
                      </children>
                   </Pane>
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="71.0" prefWidth="137.0" text="Soy Milk" GridPane.columnIndex="2">
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="71.0" prefWidth="137.0" styleClass="teaToppings" stylesheets="@application.css" text="Soy Milk" GridPane.columnIndex="2">
                      <font>
                         <Font size="15.0" />
                      </font>
@@ -475,7 +475,7 @@
                         </Label>
                      </children>
                   </Pane>
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="266.0" layoutY="10.0" prefHeight="71.0" prefWidth="137.0" text="Whipped Cream" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="266.0" layoutY="10.0" prefHeight="71.0" prefWidth="137.0" styleClass="teaToppings" stylesheets="@application.css" text="Whipped Cream" GridPane.columnIndex="2" GridPane.rowIndex="1">
                      <font>
                         <Font size="15.0" />
                      </font>
