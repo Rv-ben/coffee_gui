@@ -25,7 +25,7 @@
          <content>
             <ListView fx:id="rec" prefHeight="200.0" prefWidth="200.0" />
          </content></TitledPane>
-      <Pane fx:id="teaScreen" layoutX="119.0" layoutY="31.0" prefHeight="594.0" prefWidth="543.0" visible="false">
+      <Pane fx:id="teaScreen" layoutX="119.0" layoutY="31.0" prefHeight="594.0" prefWidth="543.0">
          <children>
             <HBox prefHeight="100.0" prefWidth="532.0">
                <children>
@@ -61,8 +61,8 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <ChoiceBox fx:id="teaChoice" prefHeight="31.0" prefWidth="271.0" GridPane.rowIndex="1" />
-                        <Label styleClass="teaTopping" stylesheets="@application.css" text="            Select Tea Type">
+                        <ChoiceBox fx:id="teaChoice" prefHeight="31.0" prefWidth="271.0" styleClass="selectTypeBox" stylesheets="@application.css" GridPane.rowIndex="1" />
+                        <Label styleClass="teaToppings" stylesheets="@application.css" text="            Select Tea Type">
                            <font>
                               <Font size="22.0" />
                            </font>
@@ -560,13 +560,13 @@
             </HBox>
             <VBox layoutX="22.0" layoutY="64.0" prefHeight="114.0" prefWidth="499.0">
                <children>
-                  <Label prefHeight="52.0" prefWidth="499.0" styleClass="selectTypeBox" stylesheets="@application.css" text="Select Croissant Type" />
+                  <Label prefHeight="52.0" prefWidth="499.0" styleClass="teaToppings" stylesheets="@application.css" text="Select Croissant Type" />
                   <ChoiceBox fx:id="corsChoice" prefHeight="42.0" prefWidth="499.0" styleClass="selectTypeBox" stylesheets="@application.css" />
                </children>
             </VBox>
          </children>
       </Pane>
-      <Pane fx:id="cookieScreen" layoutX="101.0" layoutY="24.0" prefHeight="608.0" prefWidth="543.0">
+      <Pane fx:id="cookieScreen" layoutX="101.0" layoutY="24.0" prefHeight="608.0" prefWidth="543.0" visible="false">
          <children>
             <GridPane gridLinesVisible="true" layoutY="415.0" prefHeight="192.0" prefWidth="542.0">
                <columnConstraints>
@@ -593,7 +593,7 @@
             </GridPane>
             <VBox layoutX="22.0" layoutY="71.0" prefHeight="130.0" prefWidth="499.0">
                <children>
-                  <Label prefHeight="41.0" prefWidth="499.0" styleClass="teaToppings" stylesheets="@application.css" text="Select Macaron Type" />
+                  <Label prefHeight="41.0" prefWidth="499.0" styleClass="teaToppings" stylesheets="@application.css" text="Select Cookie Type" />
                   <ChoiceBox id="cookieChoice" fx:id="cookieChoice" prefHeight="39.0" prefWidth="499.0" styleClass="selectTypeBox" stylesheets="@application.css" />
                </children>
             </VBox>
