@@ -376,7 +376,7 @@
             <Point3D />
          </rotationAxis>
       </Pane>
-      <VBox prefHeight="650.0" prefWidth="101.0" visible="false">
+      <VBox prefHeight="650.0" prefWidth="101.0">
          <children>
             <Button fx:id="CoffeeButton" mnemonicParsing="false" onAction="#productButtonClicked" prefHeight="130.0" prefWidth="100.0" styleClass="tabButton" stylesheets="@application.css" text="Coffee" />
             <Button fx:id="TeaButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#productButtonClicked" prefHeight="130.0" prefWidth="100.0" styleClass="tabButton" stylesheets="@application.css" text="Tea" />
@@ -665,7 +665,7 @@
             </GridPane>
          </children>
       </VBox>
-      <Pane fx:id="checkoutScreen" layoutX="6.0" layoutY="28.0" prefHeight="594.0" prefWidth="676.0">
+      <Pane fx:id="checkoutScreen" layoutX="6.0" layoutY="28.0" prefHeight="594.0" prefWidth="676.0" visible="false">
          <children>
             <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="100.0" styleClass="backToMenuBtn" stylesheets="@application.css" text="Back" />
             <VBox layoutX="106.0" layoutY="25.0" prefHeight="569.0" prefWidth="542.0">
@@ -678,7 +678,7 @@
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Label prefHeight="102.0" prefWidth="100.0" text="Cash Tendered:" />
+                        <Label prefHeight="102.0" prefWidth="100.0" styleClass="cashTendered" text="Cash Tendered:" />
                      </children>
                   </HBox>
                </children>
