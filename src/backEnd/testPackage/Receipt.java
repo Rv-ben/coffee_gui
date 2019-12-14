@@ -10,9 +10,9 @@ import backEnd.Products.Product;
  */
 public class Receipt{
 	
-    public ArrayList<Product> listOfProducts;
+    public ArrayList<Product> listOfProducts = new ArrayList<Product>();
 
-    public double subTotal=0,total=0,tax = 1;
+    public double subTotal=0,total=0,discount=0, tax = 1;
 
     Coupon coupon;
 
@@ -38,12 +38,11 @@ public class Receipt{
 
     public void printReceipt(){
         //String message ="";
-    	final double DRINK_RATE = .5;
+    	final double DRINK_RATE = -.5;
     	final double PASTRY_DISCOUNT = -1;
     	final double GENERAL_DISCOUNT = -2;
         double productPrice, drinkDiscountPrice;
         
-        //listOfProducts.get(0).getName();  //create a method "getName" in product+++++++++++++++++++++++++++++++++
         
         //displaying all the purchased items
         for (int i = 0; i<listOfProducts.size(); i++) {
@@ -54,39 +53,40 @@ public class Receipt{
         
         productPrice = getTotalValue();
         
-        System.out.println("\nSubtotal: "+ productPrice);
-        System.out.println("Tax( "+ tax + "%): "+ productPrice * tax);
-        System.out.println("Total: "+ (productPrice + productPrice*tax));
-
-        
-        
-        // getting an index number of highest price drink
+     // getting an index number of highest price drink
         if (this.coupon.drink == true) {
         	
         	drinkDiscountPrice = listOfProducts.get(findDrink()).getCost() * DRINK_RATE;
-        	
+        	discount += drinkDiscountPrice;
         	System.out.print("The drink coupon has been applied to item No." + (findDrink()+1));
         	System.out.printf(", applied discout $%5.2f%n", drinkDiscountPrice );
         	
         }
-        	
         
         // getting index numbers of cookies
     	if (this.coupon.pastry == true) {
-    		if (getAllCookies() == true) {
-            	System.out.printf("The cookie coupon $ %5.2f has been applied%n" ,PASTRY_DISCOUNT );
+    		//int indexNum = getAllCookies();
+    		if (getAllCookies() >0) {
+    			System.out.printf("The cookie coupon $ %5.2f has been applied to item No. %d%n" ,PASTRY_DISCOUNT,(getAllCookies()+1));
+    			discount += PASTRY_DISCOUNT;
     		}
+    		
     	}
     		
     	// applying general coupon
         if (coupon.general == true) {
-        	System.out.printf("The general coupon $ %5.2f has been applied%n" , GENERAL_DISCOUNT);
-        }
         	
-    	
+        	System.out.printf("The general coupon $ %5.2f has been applied%n" , GENERAL_DISCOUNT);
+        	discount += GENERAL_DISCOUNT;
+        }
         
-        
-        
+        System.out.println("\nSubtotal: "+ productPrice);
+        System.out.println("\nDiscount: "+ discount);
+        System.out.println("Tax( "+ tax + "%): "+ (productPrice+discount) * tax);
+        System.out.printf("Tax( %.2f %%): %.2f%n", tax, (productPrice+discount) * tax);
+        //System.out.printf( (productPrice+discount) * tax);
+        System.out.println("Total: "+ ((productPrice+discount) + (productPrice+discount)*tax));
+
 
         
 
@@ -131,12 +131,12 @@ public class Receipt{
     }
     
     
-    public boolean getAllCookies(){
-    	boolean coockieIndex = false;
+    public int getAllCookies(){
+    	int coockieIndex = -1;
     	
     	for (int i = 0; i < listOfProducts.size(); i++) {
     		if(listOfProducts.get(i) instanceof Cookie) {
-    			coockieIndex = true;
+    			coockieIndex = i;
     		}
     	}
     	return coockieIndex;
@@ -150,7 +150,5 @@ public class Receipt{
     	
     	return price;
     }
-
-    
     
 }
