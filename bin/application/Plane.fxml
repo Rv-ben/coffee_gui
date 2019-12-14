@@ -396,13 +396,13 @@
             <Button fx:id="MacButton" layoutX="10.0" layoutY="400.0" mnemonicParsing="false" onAction="#productButtonClicked" prefHeight="130.0" prefWidth="100.0" styleClass="tabButton" stylesheets="@application.css" text="Macaron" />
          </children>
       </VBox>
-      <Pane fx:id="coffeeScreen" layoutX="110.0" layoutY="14.0" prefHeight="608.0" prefWidth="543.0" visible="false">
+      <Pane fx:id="coffeeScreen" layoutX="110.0" layoutY="14.0" prefHeight="608.0" prefWidth="543.0">
          <children>
             <HBox layoutX="14.0" layoutY="14.0" prefHeight="100.0" prefWidth="509.0">
                <children>
                   <TitledPane animated="false" prefHeight="100.0" prefWidth="510.0" styleClass="sizeBox" stylesheets="@application.css" text="SIZE">
                     <content>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="uniBackground" stylesheets="@application.css">
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="uniBackground" stylesheets="@application.css" visible="false">
                            <children>
                               <GridPane layoutY="3.0" prefHeight="66.0" prefWidth="508.0">
                                 <columnConstraints>
@@ -610,7 +610,7 @@
             </TitledPane>
          </children>
       </Pane>
-      <Pane fx:id="cookieScreen" layoutX="101.0" layoutY="24.0" prefHeight="608.0" prefWidth="543.0">
+      <Pane fx:id="cookieScreen" layoutX="101.0" layoutY="24.0" prefHeight="608.0" prefWidth="543.0" visible="false">
          <children>
             <HBox layoutX="14.0" layoutY="14.0" prefHeight="100.0" prefWidth="509.0" />
             <HBox layoutX="14.0" layoutY="114.0" prefHeight="100.0" prefWidth="510.0">
