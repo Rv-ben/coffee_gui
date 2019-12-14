@@ -566,7 +566,7 @@
             </VBox>
          </children>
       </Pane>
-      <Pane fx:id="cookieScreen" layoutX="101.0" layoutY="24.0" prefHeight="608.0" prefWidth="543.0" visible="false">
+      <Pane fx:id="cookieScreen" layoutX="101.0" layoutY="24.0" prefHeight="608.0" prefWidth="543.0">
          <children>
             <GridPane gridLinesVisible="true" layoutY="415.0" prefHeight="192.0" prefWidth="542.0">
                <columnConstraints>
@@ -591,9 +591,15 @@
                   <Button mnemonicParsing="false" onAction="#addCookieToCart" prefHeight="201.0" prefWidth="439.0" styleClass="addToCartButton" stylesheets="@application.css" text="Add to Cart" />
                </children>
             </GridPane>
+            <VBox layoutX="22.0" layoutY="71.0" prefHeight="130.0" prefWidth="499.0">
+               <children>
+                  <Label prefHeight="41.0" prefWidth="499.0" styleClass="teaToppings" stylesheets="@application.css" text="Select Macaron Type" />
+                  <ChoiceBox id="cookieChoice" fx:id="cookieChoice" prefHeight="39.0" prefWidth="499.0" styleClass="selectTypeBox" stylesheets="@application.css" />
+               </children>
+            </VBox>
          </children>
       </Pane>
-      <Pane fx:id="macaroonScreen" layoutX="101.0" layoutY="24.0" prefHeight="608.0" prefWidth="543.0">
+      <Pane fx:id="macaroonScreen" layoutX="101.0" layoutY="24.0" prefHeight="608.0" prefWidth="543.0" visible="false">
          <children>
             <VBox layoutX="22.0" layoutY="57.0" prefHeight="130.0" prefWidth="499.0">
                <children>
