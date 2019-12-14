@@ -549,7 +549,7 @@
             </GridPane>
          </children>
       </Pane>
-      <Pane fx:id="croissantScreen" layoutX="110.0" layoutY="24.0" prefHeight="608.0" prefWidth="543.0">
+      <Pane fx:id="croissantScreen" layoutX="110.0" layoutY="24.0" prefHeight="608.0" prefWidth="543.0" visible="false">
          <children>
             <HBox layoutX="14.0" layoutY="14.0" prefHeight="100.0" prefWidth="509.0" />
             <HBox layoutX="14.0" layoutY="114.0" prefHeight="100.0" prefWidth="510.0">
@@ -610,7 +610,7 @@
             </TitledPane>
          </children>
       </Pane>
-      <Pane fx:id="cookieScreen" layoutX="101.0" layoutY="24.0" prefHeight="608.0" prefWidth="543.0" visible="false">
+      <Pane fx:id="cookieScreen" layoutX="101.0" layoutY="24.0" prefHeight="608.0" prefWidth="543.0">
          <children>
             <HBox layoutX="14.0" layoutY="14.0" prefHeight="100.0" prefWidth="509.0" />
             <HBox layoutX="14.0" layoutY="114.0" prefHeight="100.0" prefWidth="510.0">
@@ -619,7 +619,7 @@
                      <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <ChoiceBox fx:id="CookieChoice" layoutX="79.0" layoutY="23.0" prefHeight="27.0" prefWidth="339.0" />
+                              <ChoiceBox fx:id="cookieChoice" layoutX="79.0" layoutY="23.0" prefHeight="27.0" prefWidth="339.0" />
                            </children>
                         </AnchorPane>
                      </content>
