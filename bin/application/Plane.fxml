@@ -62,7 +62,7 @@
                     </rowConstraints>
                      <children>
                         <ChoiceBox fx:id="teaChoice" prefHeight="31.0" prefWidth="271.0" GridPane.rowIndex="1" />
-                        <Label text="            Select Tea Type">
+                        <Label styleClass="teaTopping" stylesheets="@application.css" text="            Select Tea Type">
                            <font>
                               <Font size="22.0" />
                            </font>
@@ -389,7 +389,7 @@
             <Button fx:id="MacButton" layoutX="10.0" layoutY="400.0" mnemonicParsing="false" onAction="#productButtonClicked" prefHeight="130.0" prefWidth="100.0" styleClass="tabButton" stylesheets="@application.css" text="Macaron" />
          </children>
       </VBox>
-      <Pane fx:id="coffeeScreen" layoutX="110.0" layoutY="14.0" prefHeight="608.0" prefWidth="543.0">
+      <Pane fx:id="coffeeScreen" layoutX="110.0" layoutY="14.0" prefHeight="608.0" prefWidth="543.0" visible="false">
          <children>
             <HBox layoutX="14.0" layoutY="14.0" prefHeight="100.0" prefWidth="509.0">
                <children>
@@ -530,12 +530,6 @@
       </Pane>
       <Pane fx:id="croissantScreen" layoutX="110.0" layoutY="24.0" prefHeight="608.0" prefWidth="543.0" visible="false">
          <children>
-            <HBox layoutX="14.0" layoutY="14.0" prefHeight="100.0" prefWidth="509.0" />
-            <HBox layoutX="14.0" layoutY="114.0" prefHeight="100.0" prefWidth="510.0">
-               <children>
-                  <ChoiceBox fx:id="corsChoice" prefHeight="27.0" prefWidth="339.0" styleClass="selectTypeBox" stylesheets="@application.css" />
-               </children>
-            </HBox>
             <GridPane gridLinesVisible="true" layoutY="415.0" prefHeight="192.0" prefWidth="542.0">
                <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -559,21 +553,21 @@
                   <Button id="addToCartButton" mnemonicParsing="false" onAction="#addCorsToCart" prefHeight="211.0" prefWidth="285.0" styleClass="addToCartButton" stylesheets="@application.css" text="Add To Cart" />
                </children>
             </GridPane>
-            <TitledPane animated="false" layoutX="14.0" layoutY="214.0" prefHeight="100.0" prefWidth="510.0" text="SIZE">
-               <graphic>
-                  <RadioButton fx:id="heatedCors" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="66.0" prefWidth="506.0" text="Heated" />
-               </graphic>
-            </TitledPane>
+            <HBox layoutX="62.0" layoutY="204.0" prefHeight="71.0" prefWidth="476.0">
+               <children>
+                  <RadioButton fx:id="heatedCors" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="66.0" prefWidth="508.0" styleClass="smlButtons" stylesheets="@application.css" text="Heated" />
+               </children>
+            </HBox>
+            <VBox layoutX="22.0" layoutY="64.0" prefHeight="114.0" prefWidth="499.0">
+               <children>
+                  <Label prefHeight="52.0" prefWidth="499.0" styleClass="selectTypeBox" stylesheets="@application.css" text="Select Croissant Type" />
+                  <ChoiceBox fx:id="corsChoice" prefHeight="42.0" prefWidth="499.0" styleClass="selectTypeBox" stylesheets="@application.css" />
+               </children>
+            </VBox>
          </children>
       </Pane>
       <Pane fx:id="cookieScreen" layoutX="101.0" layoutY="24.0" prefHeight="608.0" prefWidth="543.0" visible="false">
          <children>
-            <HBox layoutX="14.0" layoutY="14.0" prefHeight="100.0" prefWidth="509.0" />
-            <HBox layoutX="14.0" layoutY="114.0" prefHeight="100.0" prefWidth="510.0">
-               <children>
-                  <ChoiceBox fx:id="cookieChoice" prefHeight="27.0" prefWidth="339.0" styleClass="selectTypeBox" stylesheets="@application.css" />
-               </children>
-            </HBox>
             <GridPane gridLinesVisible="true" layoutY="415.0" prefHeight="192.0" prefWidth="542.0">
                <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -599,18 +593,18 @@
             </GridPane>
          </children>
       </Pane>
-      <Pane fx:id="macaroonScreen" layoutX="101.0" layoutY="24.0" prefHeight="608.0" prefWidth="543.0" visible="false">
+      <Pane fx:id="macaroonScreen" layoutX="101.0" layoutY="24.0" prefHeight="608.0" prefWidth="543.0">
          <children>
-            <HBox layoutX="14.0" layoutY="14.0" prefHeight="100.0" prefWidth="509.0" />
-            <HBox layoutX="14.0" layoutY="114.0" prefHeight="100.0" prefWidth="510.0">
+            <VBox layoutX="22.0" layoutY="57.0" prefHeight="130.0" prefWidth="499.0">
                <children>
-                  <ChoiceBox fx:id="macChoice" prefHeight="27.0" prefWidth="339.0" styleClass="selectTypeBox" stylesheets="@application.css" />
+                  <Label prefHeight="41.0" prefWidth="499.0" styleClass="teaToppings" stylesheets="@application.css" text="Select Macaron Type" />
+                  <ChoiceBox id="macChoice" fx:id="cookieChoice" prefHeight="39.0" prefWidth="499.0" styleClass="selectTypeBox" stylesheets="@application.css" />
                </children>
-            </HBox>
-            <GridPane gridLinesVisible="true" layoutY="415.0" prefHeight="192.0" prefWidth="542.0">
+            </VBox>
+            <GridPane gridLinesVisible="true" layoutY="407.0" prefHeight="200.0" prefWidth="542.0">
                <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="297.0" minWidth="10.0" prefWidth="276.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="266.0" minWidth="10.0" prefWidth="266.0" />
                </columnConstraints>
                <rowConstraints>
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
