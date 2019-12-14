@@ -129,12 +129,21 @@ public class PaneController {
 	}
 	
 	public void sweetnessCount(ActionEvent evt) {
+
 		Node source = (Node) evt.getSource();
 		
 		Label count = (Label)source.getParent().getChildrenUnmodifiable().get(2);
 		
-		int countVal = Integer.parseInt(count.getText());
+		double countVal = Double.parseDouble(count.getText());
 		
+		if(countVal != 0  && source.getId().equalsIgnoreCase("minus")) {
+			countVal -= .25;
+			count.setText(""+(countVal));
+		}
+		else if(source.getId().equalsIgnoreCase("plus")&& countVal != 1) {
+			countVal += .25;
+			count.setText(""+(countVal));
+		}
 	}
 	
 	public void addCoffeeToCart() {
@@ -156,7 +165,7 @@ public class PaneController {
 		tea.spec = DrinkTypes.valueOf((String)teaChoice.getValue());
 		tea.type = DrinkTypes.tea;
 		tea.size = Sizes.valueOf(((RadioButton)teaSize.getSelectedToggle()).getId());
-		tea.sweetness = Integer.parseInt((sweetnessLabel.getText()));
+		tea.sweetness = Double.parseDouble((sweetnessLabel.getText()));
 		
 		addToppings(tea.toppings,teaToppingLabels);
 		
@@ -186,7 +195,7 @@ public class PaneController {
 		cookie.special = PastryTypes.valueOf((String)cookieChoice.getValue());
 		cookie.qty = Integer.parseInt(cookieQty.getText());
 		
-		addAmountToCart(Integer.parseInt(cookieQty.getText()),pf.createProduct(cookie));
+		addAmountToCart(1,pf.createProduct(cookie));
 		updateRec();
 	}
 	
@@ -197,7 +206,7 @@ public class PaneController {
 		mac.special = PastryTypes.valueOf((String)macChoice.getValue());
 		mac.qty = Integer.parseInt(macQty.getText());
 		
-		addAmountToCart(Integer.parseInt(macQty.getText()),pf.createProduct(mac));
+		addAmountToCart(1,pf.createProduct(mac));
 		updateRec();
 		
 	}
