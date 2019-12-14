@@ -598,7 +598,7 @@
             <VBox layoutX="22.0" layoutY="57.0" prefHeight="130.0" prefWidth="499.0">
                <children>
                   <Label prefHeight="41.0" prefWidth="499.0" styleClass="teaToppings" stylesheets="@application.css" text="Select Macaron Type" />
-                  <ChoiceBox id="macChoice" fx:id="cookieChoice" prefHeight="39.0" prefWidth="499.0" styleClass="selectTypeBox" stylesheets="@application.css" />
+                  <ChoiceBox id="macChoice" fx:id="macChoice" prefHeight="39.0" prefWidth="499.0" styleClass="selectTypeBox" stylesheets="@application.css" />
                </children>
             </VBox>
             <GridPane gridLinesVisible="true" layoutY="407.0" prefHeight="200.0" prefWidth="542.0">
