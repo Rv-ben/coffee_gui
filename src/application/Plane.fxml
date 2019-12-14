@@ -8,6 +8,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -18,7 +19,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1000.0" styleClass="mainBackground" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PaneController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1000.0" styleClass="mainBackground" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PaneController">
    <children>
       <Pane fx:id="teaScreen" layoutX="119.0" layoutY="31.0" prefHeight="594.0" prefWidth="543.0" visible="false">
          <children>
@@ -375,7 +376,7 @@
             <Point3D />
          </rotationAxis>
       </Pane>
-      <VBox prefHeight="650.0" prefWidth="101.0">
+      <VBox prefHeight="650.0" prefWidth="101.0" visible="false">
          <children>
             <Button fx:id="CoffeeButton" mnemonicParsing="false" onAction="#productButtonClicked" prefHeight="130.0" prefWidth="100.0" styleClass="tabButton" stylesheets="@application.css" text="Coffee" />
             <Button fx:id="TeaButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#productButtonClicked" prefHeight="130.0" prefWidth="100.0" styleClass="tabButton" stylesheets="@application.css" text="Tea" />
@@ -653,16 +654,36 @@
                     </rowConstraints>
                      <children>
                         <Label alignment="CENTER" prefHeight="133.0" prefWidth="109.0" styleClass="teaToppings" stylesheets="@application.css" text="SubTotal:" />
-                        <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="133.0" prefWidth="109.0" styleClass="teaToppings" stylesheets="@application.css" text="SubTotal:" GridPane.rowIndex="1" />
-                        <Label alignment="CENTER" layoutX="10.0" layoutY="64.0" prefHeight="133.0" prefWidth="109.0" styleClass="teaToppings" stylesheets="@application.css" text="SubTotal:" GridPane.rowIndex="2" />
-                        <Label alignment="CENTER" layoutX="10.0" layoutY="117.0" prefHeight="133.0" prefWidth="109.0" styleClass="teaToppings" stylesheets="@application.css" text="SubTotal:" GridPane.columnIndex="1" />
-                        <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="133.0" prefWidth="109.0" styleClass="teaToppings" stylesheets="@application.css" text="SubTotal:" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Label alignment="CENTER" layoutX="10.0" layoutY="64.0" prefHeight="133.0" prefWidth="109.0" styleClass="teaToppings" stylesheets="@application.css" text="SubTotal:" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="133.0" prefWidth="109.0" styleClass="teaToppings" stylesheets="@application.css" text="Tax:" GridPane.rowIndex="1" />
+                        <Label alignment="CENTER" layoutX="10.0" layoutY="64.0" prefHeight="133.0" prefWidth="109.0" styleClass="teaToppings" stylesheets="@application.css" text="Total:" GridPane.rowIndex="2" />
+                        <Label fx:id="subTotal" alignment="CENTER" layoutX="10.0" layoutY="117.0" prefHeight="133.0" prefWidth="109.0" styleClass="teaToppings" stylesheets="@application.css" text="SubTotal:" GridPane.columnIndex="1" />
+                        <Label fx:id="tax" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="133.0" prefWidth="109.0" styleClass="teaToppings" stylesheets="@application.css" text="SubTotal:" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="total" alignment="CENTER" layoutX="10.0" layoutY="64.0" prefHeight="133.0" prefWidth="109.0" styleClass="teaToppings" stylesheets="@application.css" text="SubTotal:" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                      </children>
                   </GridPane>
                </children>
             </GridPane>
          </children>
       </VBox>
+      <Pane fx:id="checkoutScreen" layoutX="6.0" layoutY="28.0" prefHeight="594.0" prefWidth="676.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="100.0" styleClass="backToMenuBtn" stylesheets="@application.css" text="Back" />
+            <VBox layoutX="106.0" layoutY="25.0" prefHeight="569.0" prefWidth="542.0">
+               <children>
+                  <HBox prefHeight="130.0" prefWidth="518.0">
+                     <children>
+                        <Label prefHeight="50.0" prefWidth="100.0" styleClass="custNameLabel" stylesheets="@application.css" text="Name: " textFill="WHITE" />
+                        <TextField prefHeight="50.0" prefWidth="420.0" styleClass="custNameField" stylesheets="@application.css" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="102.0" prefWidth="100.0" text="Cash Tendered:" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>
