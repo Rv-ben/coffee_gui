@@ -513,7 +513,7 @@
                         </Label>
                      </children>
                   </Pane>
-                  <Button mnemonicParsing="false" onAction="#addCoffeeToCart" prefHeight="218.0" prefWidth="317.0" styleClass="CoffeeAddToCartButton" stylesheets="@application.css" text="Add to Cart">
+                  <Button mnemonicParsing="false" onAction="#addCoffeeToCart" prefHeight="218.0" prefWidth="317.0" styleClass="addToCartButton" stylesheets="@application.css" text="Add to Cart">
                      <font>
                         <Font size="24.0" />
                      </font>
