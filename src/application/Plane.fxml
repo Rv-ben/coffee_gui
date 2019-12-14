@@ -396,7 +396,7 @@
             <Button fx:id="MacButton" layoutX="10.0" layoutY="400.0" mnemonicParsing="false" onAction="#productButtonClicked" prefHeight="130.0" prefWidth="100.0" styleClass="macButton" stylesheets="@application.css" text="Macaroon" />
          </children>
       </VBox>
-      <Pane fx:id="coffeeScreen" layoutX="110.0" layoutY="14.0" prefHeight="608.0" prefWidth="543.0">
+      <Pane fx:id="coffeeScreen" layoutX="110.0" layoutY="14.0" prefHeight="608.0" prefWidth="543.0" visible="false">
          <children>
             <HBox layoutX="14.0" layoutY="14.0" prefHeight="100.0" prefWidth="509.0">
                <children>
@@ -540,7 +540,7 @@
                         </Label>
                      </children>
                   </Pane>
-                  <Button mnemonicParsing="false" onAction="#addCoffeeToCart" prefHeight="218.0" prefWidth="317.0" text="Add to Cart">
+                  <Button mnemonicParsing="false" onAction="#addCoffeeToCart" prefHeight="218.0" prefWidth="317.0" styleClass="CoffeeAddToCartButton" stylesheets="@application.css" text="Add to Cart">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -549,7 +549,7 @@
             </GridPane>
          </children>
       </Pane>
-      <Pane fx:id="croissantScreen" layoutX="110.0" layoutY="24.0" prefHeight="608.0" prefWidth="543.0" visible="false">
+      <Pane fx:id="croissantScreen" layoutX="110.0" layoutY="24.0" prefHeight="608.0" prefWidth="543.0">
          <children>
             <HBox layoutX="14.0" layoutY="14.0" prefHeight="100.0" prefWidth="509.0" />
             <HBox layoutX="14.0" layoutY="114.0" prefHeight="100.0" prefWidth="510.0">
@@ -558,7 +558,7 @@
                      <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <ChoiceBox layoutX="79.0" layoutY="23.0" prefHeight="27.0" prefWidth="339.0" />
+                              <ChoiceBox fx:id="corsChoice" layoutX="79.0" layoutY="23.0" prefHeight="27.0" prefWidth="339.0" />
                            </children>
                         </AnchorPane>
                      </content>
@@ -576,8 +576,8 @@
                <children>
                   <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                      <children>
-                        <Button fx:id="Plus1" layoutX="135.0" layoutY="1.0" mnemonicParsing="false" onAction="#toppingCount" prefHeight="96.0" prefWidth="135.0" text="+" />
-                        <Button fx:id="Minus1" layoutX="135.0" layoutY="96.0" mnemonicParsing="false" onAction="#toppingCount" prefHeight="96.0" prefWidth="135.0" text="-" />
+                        <Button fx:id="Plus" layoutX="135.0" layoutY="1.0" mnemonicParsing="false" onAction="#toppingCount" prefHeight="96.0" prefWidth="135.0" text="+" />
+                        <Button fx:id="Minus" layoutX="135.0" layoutY="96.0" mnemonicParsing="false" onAction="#toppingCount" prefHeight="96.0" prefWidth="135.0" text="-" />
                         <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="-3.0" prefHeight="192.0" prefWidth="135.0" text="0" textFill="#54f206">
                            <font>
                               <Font size="48.0" />
@@ -585,11 +585,7 @@
                         </Label>
                      </children>
                   </Pane>
-                  <Label alignment="CENTER" prefHeight="195.0" prefWidth="285.0" text="ADD TO CART">
-                     <font>
-                        <Font size="36.0" />
-                     </font>
-                  </Label>
+                  <Button mnemonicParsing="false" onAction="#addCorsToCart" prefHeight="211.0" prefWidth="285.0" text="Add To Cart" />
                </children>
             </GridPane>
             <TitledPane animated="false" layoutX="14.0" layoutY="214.0" prefHeight="100.0" prefWidth="510.0" text="SIZE">
@@ -605,7 +601,7 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <RadioButton fx:id="large1" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="66.0" prefWidth="506.0" text="Heated" GridPane.columnIndex="1" />
+                              <RadioButton fx:id="heatedCors" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="66.0" prefWidth="506.0" text="Heated" GridPane.columnIndex="1" />
                            </children>
                         </GridPane>
                      </children>
@@ -623,7 +619,7 @@
                      <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <ChoiceBox layoutX="79.0" layoutY="23.0" prefHeight="27.0" prefWidth="339.0" />
+                              <ChoiceBox fx:id="CookieChoice" layoutX="79.0" layoutY="23.0" prefHeight="27.0" prefWidth="339.0" />
                            </children>
                         </AnchorPane>
                      </content>
@@ -641,8 +637,8 @@
                <children>
                   <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                      <children>
-                        <Button fx:id="Plus11" layoutX="135.0" layoutY="1.0" mnemonicParsing="false" onAction="#toppingCount" prefHeight="96.0" prefWidth="135.0" text="+" />
-                        <Button fx:id="Minus11" layoutX="135.0" layoutY="96.0" mnemonicParsing="false" onAction="#toppingCount" prefHeight="96.0" prefWidth="135.0" text="-" />
+                        <Button fx:id="Plus" layoutX="135.0" layoutY="1.0" mnemonicParsing="false" onAction="#toppingCount" prefHeight="96.0" prefWidth="135.0" text="+" />
+                        <Button fx:id="Minus" layoutX="135.0" layoutY="96.0" mnemonicParsing="false" onAction="#toppingCount" prefHeight="96.0" prefWidth="135.0" text="-" />
                         <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="-3.0" prefHeight="192.0" prefWidth="135.0" text="0" textFill="#54f206">
                            <font>
                               <Font size="48.0" />
@@ -650,11 +646,7 @@
                         </Label>
                      </children>
                   </Pane>
-                  <Label alignment="CENTER" prefHeight="195.0" prefWidth="285.0" text="ADD TO CART">
-                     <font>
-                        <Font size="36.0" />
-                     </font>
-                  </Label>
+                  <Button mnemonicParsing="false" onAction="#addCookieToCart" prefHeight="201.0" prefWidth="439.0" text="Add to Cart" />
                </children>
             </GridPane>
          </children>
@@ -668,7 +660,7 @@
                      <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <ChoiceBox layoutX="79.0" layoutY="23.0" prefHeight="27.0" prefWidth="339.0" />
+                              <ChoiceBox fx:id="macChoice" layoutX="79.0" layoutY="23.0" prefHeight="27.0" prefWidth="339.0" />
                            </children>
                         </AnchorPane>
                      </content>
@@ -686,8 +678,8 @@
                <children>
                   <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                      <children>
-                        <Button fx:id="Plus111" layoutX="135.0" layoutY="1.0" mnemonicParsing="false" onAction="#toppingCount" prefHeight="96.0" prefWidth="135.0" text="+" />
-                        <Button fx:id="Minus111" layoutX="135.0" layoutY="96.0" mnemonicParsing="false" onAction="#toppingCount" prefHeight="96.0" prefWidth="135.0" text="-" />
+                        <Button fx:id="Plus" layoutX="135.0" layoutY="1.0" mnemonicParsing="false" onAction="#toppingCount" prefHeight="96.0" prefWidth="135.0" text="+" />
+                        <Button fx:id="Minus" layoutX="135.0" layoutY="96.0" mnemonicParsing="false" onAction="#toppingCount" prefHeight="96.0" prefWidth="135.0" text="-" />
                         <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="-3.0" prefHeight="192.0" prefWidth="135.0" text="0" textFill="#54f206">
                            <font>
                               <Font size="48.0" />
@@ -695,11 +687,7 @@
                         </Label>
                      </children>
                   </Pane>
-                  <Label alignment="CENTER" prefHeight="195.0" prefWidth="285.0" text="ADD TO CART">
-                     <font>
-                        <Font size="36.0" />
-                     </font>
-                  </Label>
+                  <Button mnemonicParsing="false" onAction="#addMacToCart" prefHeight="293.0" prefWidth="345.0" text="Add to Cart" />
                </children>
             </GridPane>
          </children>
