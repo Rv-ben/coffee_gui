@@ -389,11 +389,11 @@
       </Pane>
       <VBox prefHeight="650.0" prefWidth="101.0">
          <children>
-            <Button id="CoffeeButton" fx:id="CoffeeButton" mnemonicParsing="false" onAction="#productButtonClicked" prefHeight="130.0" prefWidth="100.0" styleClass="CoffeeButton" stylesheets="@application.css" />
-            <Button fx:id="TeaButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#productButtonClicked" prefHeight="130.0" prefWidth="100.0" styleClass="TeaButton" stylesheets="@application.css" />
-            <Button fx:id="CorsButton" layoutX="10.0" layoutY="270.0" mnemonicParsing="false" onAction="#productButtonClicked" prefHeight="130.0" prefWidth="100.0" styleClass="CrosButton" stylesheets="@application.css" />
-            <Button fx:id="CookieButton" layoutX="10.0" layoutY="400.0" mnemonicParsing="false" onAction="#productButtonClicked" prefHeight="130.0" prefWidth="100.0" styleClass="CookieButton" stylesheets="@application.css" />
-            <Button fx:id="MacButton" layoutX="10.0" layoutY="400.0" mnemonicParsing="false" onAction="#productButtonClicked" prefHeight="130.0" prefWidth="100.0" styleClass="macButton" stylesheets="@application.css" />
+            <Button id="tabButton" fx:id="CoffeeButton" mnemonicParsing="false" onAction="#productButtonClicked" prefHeight="130.0" prefWidth="100.0" styleClass="tabButton" stylesheets="@application.css" text="Coffee" />
+            <Button id="tabButton" fx:id="TeaButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#productButtonClicked" prefHeight="130.0" prefWidth="100.0" styleClass="tabButton" stylesheets="@application.css" text="Tea" />
+            <Button id="tabButton" fx:id="CorsButton" layoutX="10.0" layoutY="270.0" mnemonicParsing="false" onAction="#productButtonClicked" prefHeight="130.0" prefWidth="100.0" styleClass="tabButton" stylesheets="@application.css" text="Croissant" />
+            <Button id="tabButton" fx:id="CookieButton" layoutX="10.0" layoutY="400.0" mnemonicParsing="false" onAction="#productButtonClicked" prefHeight="130.0" prefWidth="100.0" styleClass="tabButton" stylesheets="@application.css" text="Cookie" />
+            <Button id="tabButton" fx:id="MacButton" layoutX="10.0" layoutY="400.0" mnemonicParsing="false" onAction="#productButtonClicked" prefHeight="130.0" prefWidth="100.0" styleClass="tabButton" stylesheets="@application.css" text="Macaron" />
          </children>
       </VBox>
       <Pane fx:id="coffeeScreen" layoutX="110.0" layoutY="14.0" prefHeight="608.0" prefWidth="543.0" visible="false">
