@@ -10,7 +10,7 @@ import backEnd.Products.Product;
  */
 public class Receipt{
 	
-    ArrayList<Product> listOfProducts;
+    public ArrayList<Product> listOfProducts;
 
     public double subTotal=0,total=0,tax = 1;
 
@@ -26,6 +26,10 @@ public class Receipt{
         this.listOfProducts = products;
         this.tax = tax;
         this.coupon = coupon;
+    }
+    
+    public Receipt(double tax){
+    	this.tax = tax;
     }
 
     public void setCoupon (Coupon c){
