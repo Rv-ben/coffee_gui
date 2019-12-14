@@ -29,7 +29,7 @@
          <children>
             <HBox prefHeight="100.0" prefWidth="532.0">
                <children>
-                  <TitledPane animated="false" prefHeight="100.0" prefWidth="536.0" text="Size">
+                  <TitledPane animated="false" prefHeight="100.0" prefWidth="536.0" styleClass="sizeBox" stylesheets="@application.css" text="Size">
                      <content>
                         <AnchorPane prefHeight="72.0" prefWidth="526.0">
                            <children>
@@ -43,12 +43,12 @@
                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                 </rowConstraints>
                                  <children>
-                                    <RadioButton fx:id="small" mnemonicParsing="false" text="Small">
+                                    <RadioButton fx:id="small" mnemonicParsing="false" styleClass="smlButtons" stylesheets="@application.css" text="Small">
                                        <toggleGroup>
                                           <ToggleGroup fx:id="teaSize" />
                                        </toggleGroup></RadioButton>
-                                    <RadioButton fx:id="medium" mnemonicParsing="false" text="Medium" toggleGroup="$teaSize" GridPane.columnIndex="1" />
-                                    <RadioButton fx:id="large" mnemonicParsing="false" text="Large" toggleGroup="$teaSize" GridPane.columnIndex="2" />
+                                    <RadioButton fx:id="medium" mnemonicParsing="false" styleClass="smlButtons" stylesheets="@application.css" text="Medium" toggleGroup="$teaSize" GridPane.columnIndex="1" />
+                                    <RadioButton fx:id="large" mnemonicParsing="false" styleClass="smlButtons" stylesheets="@application.css" text="Large" toggleGroup="$teaSize" GridPane.columnIndex="2" />
                                  </children>
                               </GridPane>
                            </children>
@@ -400,7 +400,7 @@
          <children>
             <HBox layoutX="14.0" layoutY="14.0" prefHeight="100.0" prefWidth="509.0">
                <children>
-                  <TitledPane animated="false" prefHeight="100.0" prefWidth="510.0" text="SIZE">
+                  <TitledPane animated="false" prefHeight="100.0" prefWidth="510.0" styleClass="sizeBox" stylesheets="@application.css" text="SIZE">
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
@@ -415,12 +415,12 @@
                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                 </rowConstraints>
                                  <children>
-                                    <RadioButton fx:id="small" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="63.0" prefWidth="170.0" selected="true" text="SMALL" GridPane.columnIndex="1">
+                                    <RadioButton fx:id="small" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="63.0" prefWidth="170.0" selected="true" styleClass="smlButtons" stylesheets="@application.css" text="SMALL" GridPane.columnIndex="1">
                                        <toggleGroup>
                                           <ToggleGroup fx:id="coffeeSize" />
                                        </toggleGroup></RadioButton>
-                                    <RadioButton fx:id="medium" mnemonicParsing="false" prefHeight="69.0" prefWidth="170.0" text="MEDIUM" toggleGroup="$coffeeSize" GridPane.columnIndex="2" />
-                                    <RadioButton fx:id="large" mnemonicParsing="false" prefHeight="71.0" prefWidth="172.0" text="LARGE" toggleGroup="$coffeeSize" GridPane.columnIndex="3" />
+                                    <RadioButton fx:id="medium" mnemonicParsing="false" prefHeight="69.0" prefWidth="170.0" styleClass="smlButtons" stylesheets="@application.css" text="MEDIUM" toggleGroup="$coffeeSize" GridPane.columnIndex="2" />
+                                    <RadioButton fx:id="large" mnemonicParsing="false" prefHeight="71.0" prefWidth="172.0" styleClass="smlButtons" stylesheets="@application.css" text="LARGE" toggleGroup="$coffeeSize" GridPane.columnIndex="3" />
                                  </children>
                               </GridPane>
                            </children>
