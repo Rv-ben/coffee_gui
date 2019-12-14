@@ -105,7 +105,7 @@
                   </GridPane>
                </children>
             </HBox>
-            <GridPane fx:id="teaToppings" gridLinesVisible="true" layoutY="214.0" prefHeight="258.0" prefWidth="543.0">
+            <GridPane fx:id="teaToppings" gridLinesVisible="true" layoutY="214.0" prefHeight="258.0" prefWidth="543.0" styleClass="teaToppings" stylesheets="@application.css">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -646,7 +646,7 @@
                         </Label>
                      </children>
                   </Pane>
-                  <Button id="addToCartButton" mnemonicParsing="false" onAction="#addCookieToCart" prefHeight="201.0" prefWidth="439.0" styleClass="addToCartButton" stylesheets="@application.css" text="Add to Cart" />
+                  <Button mnemonicParsing="false" onAction="#addCookieToCart" prefHeight="201.0" prefWidth="439.0" styleClass="addToCartButton" stylesheets="@application.css" text="Add to Cart" />
                </children>
             </GridPane>
          </children>
