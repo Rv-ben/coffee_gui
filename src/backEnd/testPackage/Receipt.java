@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import backEnd.Products.Cookie;
 import backEnd.Products.Drink;
 import backEnd.Products.Product;
+import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 
 /**
  * Respresents a receipt object
@@ -14,7 +16,11 @@ public class Receipt{
 
     public double subTotal=0,total=0,discount=0, tax = 1;
 
-    Coupon coupon;
+    private Coupon coupon;
+    
+    private ListView display;
+    
+    private Label subTotalLab,totalLab,taxLab;
 
     Receipt(ArrayList<Product> products,double tax){
         this.listOfProducts = products;
@@ -28,8 +34,12 @@ public class Receipt{
         this.coupon = coupon;
     }
     
-    public Receipt(double tax){
+    public Receipt(double tax,ListView display,Label sub,Label tot, Label ta){
     	this.tax = tax;
+    	this.display = display;
+    	this.subTotalLab = sub;
+    	this.totalLab = tot;
+    	this.taxLab = ta;
     }
 
     public void setCoupon (Coupon c){
@@ -43,17 +53,18 @@ public class Receipt{
     	final double GENERAL_DISCOUNT = -2;
         double productPrice, drinkDiscountPrice;
         
-        
+        display.getItems().clear();
         //displaying all the purchased items
         for (int i = 0; i<listOfProducts.size(); i++) {
-        	System.out.print("Item No. " + (i+1) + "\n" );
-        	System.out.print("Type: " + listOfProducts.get(i).getDescription());
-        	System.out.println("Price: " + listOfProducts.get(i).getCost() + "\n\n");
+        	//System.out.print("Item No. " + (i+1) + "\n" );
+        	display.getItems().add("Type: " + listOfProducts.get(i).getDescription());
+        	display.getItems().add("Price: " + listOfProducts.get(i).getCost() + "\n\n");
         }
         
         productPrice = getTotalValue();
         
      // getting an index number of highest price drink
+        if(coupon != null)
         if (this.coupon.drink == true) {
         	
         	drinkDiscountPrice = listOfProducts.get(findDrink()).getCost() * DRINK_RATE;
@@ -64,6 +75,7 @@ public class Receipt{
         }
         
         // getting index numbers of cookies
+        if(coupon != null)
     	if (this.coupon.pastry == true) {
     		//int indexNum = getAllCookies();
     		if (getAllCookies() >0) {
@@ -74,16 +86,20 @@ public class Receipt{
     	}
     		
     	// applying general coupon
+        if(coupon != null)
         if (coupon.general == true) {
         	
         	System.out.printf("The general coupon $ %5.2f has been applied%n" , GENERAL_DISCOUNT);
         	discount += GENERAL_DISCOUNT;
         }
         
-        System.out.println("\nSubtotal: "+ productPrice);
+        subTotalLab.setText(""+ productPrice);
         System.out.println("\nDiscount: "+ discount);
         System.out.println("Tax( "+ tax + "%): "+ (productPrice+discount) * tax);
         System.out.printf("Tax( %.2f %%): %.2f%n", tax, (productPrice+discount) * tax);
+        taxLab.setText(""+tax);
+        total = ((productPrice+discount) + (productPrice+discount)*tax);
+        totalLab.setText(""+total);
         //System.out.printf( (productPrice+discount) * tax);
         System.out.println("Total: "+ ((productPrice+discount) + (productPrice+discount)*tax));
 

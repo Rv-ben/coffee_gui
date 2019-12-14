@@ -21,6 +21,7 @@ import backEnd.Factories.PastryFactory;
 import backEnd.Products.PastryPrices;
 import backEnd.Products.Product;
 import backEnd.enums.*;
+import backEnd.testPackage.Receipt;
 public class PaneController {
 	
 	@FXML
@@ -48,6 +49,9 @@ public class PaneController {
 	private ListView rec;
 	
 	@FXML
+	private Label subTotal,total,tax;
+	
+	@FXML
 	private DrinkFactory d  = new DrinkFactory();
 	
 	private PastryFactory pf = new PastryFactory();
@@ -56,6 +60,7 @@ public class PaneController {
 	
 	private LoadHelper x = new LoadHelper();
 	
+	private ArrayList<Receipt> recs = new ArrayList<Receipt>();
 	
 	private ArrayList<Pane> productScreenList = new ArrayList<Pane>();
 	
@@ -74,6 +79,7 @@ public class PaneController {
 		productScreenList.add(cookieScreen);
 		productScreenList.add(macaroonScreen);
 		
+		recs.add(new Receipt(.10,rec,subTotal,tax,total));
 		
 		coffeeToppingLabels = x.getListOf(coffeeToppings.getChildren());
 		teaToppingLabels = x.getListOf(teaToppings.getChildren());
@@ -222,21 +228,21 @@ public class PaneController {
 	}
 	
 	public void addAmountToCart(int num, Product x) {
+		int lastIndex = recs.size()-1;
+		
 		for(int i = 0; i<num;i++) {
-			cart.add(x);
+			recs.get(lastIndex).listOfProducts.add(x);
 		}
+		
 	}
 	
 	public void updateRec() {
-		
-		if(rec != null)
-			rec.getItems().clear();
-		
-		for(Product i : cart) {
-			rec.getItems().add(i.getDescription()+ "                                         "+ i.getCost());
-		}
+		recs.get(recs.size()-1).printReceipt();
 	}
 	
+	public void checkOut() {
+		
+	}
 	
 	
 
