@@ -120,7 +120,7 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label alignment="CENTER" prefHeight="50.0" prefWidth="142.0" text="Milk">
+                  <Label alignment="CENTER" prefHeight="50.0" prefWidth="142.0" styleClass="teaToppings" stylesheets="@application.css" text="Milk">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -144,7 +144,7 @@
                         </Label>
                      </children>
                   </Pane>
-                  <Label alignment="CENTER" layoutX="10.0" layoutY="11.0" prefHeight="50.0" prefWidth="142.0" text="Half and Half" GridPane.rowIndex="1">
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="11.0" prefHeight="50.0" prefWidth="142.0" styleClass="teaToppings" stylesheets="@application.css" text="Half and Half" GridPane.rowIndex="1">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -168,7 +168,7 @@
                         </Label>
                      </children>
                   </Pane>
-                  <Label alignment="CENTER" layoutX="10.0" layoutY="63.0" prefHeight="50.0" prefWidth="142.0" text="Soy Milk" GridPane.rowIndex="2">
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="63.0" prefHeight="50.0" prefWidth="142.0" styleClass="teaToppings" stylesheets="@application.css" text="Soy Milk" GridPane.rowIndex="2">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -192,7 +192,7 @@
                         </Label>
                      </children>
                   </Pane>
-                  <Label alignment="CENTER" layoutX="10.0" layoutY="115.0" prefHeight="50.0" prefWidth="142.0" text="Boba" GridPane.rowIndex="3">
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="115.0" prefHeight="50.0" prefWidth="142.0" styleClass="teaToppings" stylesheets="@application.css" text="Boba" GridPane.rowIndex="3">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -216,7 +216,7 @@
                         </Label>
                      </children>
                   </Pane>
-                  <Label alignment="CENTER" layoutX="10.0" layoutY="167.0" prefHeight="50.0" prefWidth="142.0" text="Popping Boba" GridPane.rowIndex="4">
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="167.0" prefHeight="50.0" prefWidth="142.0" styleClass="teaToppings" stylesheets="@application.css" text="Popping Boba" GridPane.rowIndex="4">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -240,7 +240,7 @@
                         </Label>
                      </children>
                   </Pane>
-                  <Label alignment="CENTER" layoutX="10.0" layoutY="167.0" prefHeight="50.0" prefWidth="142.0" text="Grass Jelly" GridPane.columnIndex="2">
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="167.0" prefHeight="50.0" prefWidth="142.0" styleClass="teaToppings" stylesheets="@application.css" text="Grass Jelly" GridPane.columnIndex="2">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -264,7 +264,7 @@
                         </Label>
                      </children>
                   </Pane>
-                  <Label alignment="CENTER" layoutX="282.0" layoutY="11.0" prefHeight="50.0" prefWidth="142.0" text="Lychee Jelly" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                  <Label alignment="CENTER" layoutX="282.0" layoutY="11.0" prefHeight="50.0" prefWidth="142.0" styleClass="teaToppings" stylesheets="@application.css" text="Lychee Jelly" GridPane.columnIndex="2" GridPane.rowIndex="1">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -288,7 +288,7 @@
                         </Label>
                      </children>
                   </Pane>
-                  <Label alignment="CENTER" layoutX="282.0" layoutY="63.0" prefHeight="50.0" prefWidth="142.0" text="Passion Fruit Jelly" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                  <Label alignment="CENTER" layoutX="282.0" layoutY="63.0" prefHeight="50.0" prefWidth="142.0" styleClass="teaToppings" stylesheets="@application.css" text="Passion Fruit Jelly" GridPane.columnIndex="2" GridPane.rowIndex="2">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -312,7 +312,7 @@
                         </Label>
                      </children>
                   </Pane>
-                  <Label alignment="CENTER" layoutX="282.0" layoutY="115.0" prefHeight="50.0" prefWidth="142.0" text="Coconut Jelly" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                  <Label alignment="CENTER" layoutX="282.0" layoutY="115.0" prefHeight="50.0" prefWidth="142.0" styleClass="teaToppings" stylesheets="@application.css" text="Coconut Jelly" GridPane.columnIndex="2" GridPane.rowIndex="3">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -336,7 +336,7 @@
                         </Label>
                      </children>
                   </Pane>
-                  <Label alignment="CENTER" layoutX="282.0" layoutY="167.0" prefHeight="50.0" prefWidth="142.0" text="Fresh Strawberries" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                  <Label alignment="CENTER" layoutX="282.0" layoutY="167.0" prefHeight="50.0" prefWidth="142.0" styleClass="teaToppings" stylesheets="@application.css" text="Fresh Strawberries" GridPane.columnIndex="2" GridPane.rowIndex="4">
                      <font>
                         <Font size="15.0" />
                      </font>
