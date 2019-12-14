@@ -175,6 +175,7 @@ public class PaneController {
 		cors.special = PastryTypes.valueOf((String)corsChoice.getValue());
 		
 		addAmountToCart(Integer.parseInt(corsQty.getText()),pf.createProduct(cors));
+		updateRec();
 		
 	}
 	
@@ -183,8 +184,10 @@ public class PaneController {
 		
 		cookie.pType = PastryTypes.cookie;
 		cookie.special = PastryTypes.valueOf((String)cookieChoice.getValue());
+		cookie.qty = Integer.parseInt(cookieQty.getText());
 		
 		addAmountToCart(Integer.parseInt(cookieQty.getText()),pf.createProduct(cookie));
+		updateRec();
 	}
 	
 	public void addMacToCart() {
@@ -192,9 +195,10 @@ public class PaneController {
 		
 		mac.pType = PastryTypes.macaroon;
 		mac.special = PastryTypes.valueOf((String)macChoice.getValue());
+		mac.qty = Integer.parseInt(macQty.getText());
 		
 		addAmountToCart(Integer.parseInt(macQty.getText()),pf.createProduct(mac));
-		
+		updateRec();
 		
 	}
 	
