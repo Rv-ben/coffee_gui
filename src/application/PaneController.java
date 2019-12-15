@@ -2,6 +2,8 @@ package application;
 
 import java.util.ArrayList;
 import java.util.function.Predicate;
+import javafx.beans.value.ObservableValue;
+import javafx.beans.value.ChangeListener;
 
 import javafx.event.*;
 import javafx.fxml.FXML;
@@ -103,6 +105,15 @@ public class PaneController {
         d.init(true);
         p.init(true);
         t.init(true);
+        
+        recChoice.getSelectionModel()
+        .selectedItemProperty()
+        .addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String > observableValue, String number, String number2) {
+              displayRec(number2);
+            }
+          });
 	}
 	
 	public void productButtonClicked(ActionEvent evt) {
@@ -314,6 +325,5 @@ public class PaneController {
 		recs.get(recs.size()-1).setCoupon(coupon);
 		recs.get(recs.size()-1).printReceipt();
 	}
-
 
 }
