@@ -20,6 +20,7 @@ import javafx.scene.text.Text;
 import backEnd.Decorators.ToppingPrices;
 import backEnd.Factories.DrinkFactory;
 import backEnd.Factories.PastryFactory;
+import backEnd.Products.DrinkPrices;
 import backEnd.Products.PastryPrices;
 import backEnd.Products.Product;
 import backEnd.enums.*;
@@ -97,7 +98,9 @@ public class PaneController {
 
         PastryPrices p = new PastryPrices();
         ToppingPrices t = new ToppingPrices();
-
+        DrinkPrices d = new DrinkPrices();
+        
+        d.init(true);
         p.init(true);
         t.init(true);
 	}
@@ -281,7 +284,19 @@ public class PaneController {
 	public void payButton() {
 		recs.get(recs.size()-1).setName(nameField.getText());
 		recs.add(new Receipt(.10,rec,subTotal,tax,total));
-		recChoice.getItems().add(recs.get(recs.size()-1).getName());
+		updateRecChoice();
+	}
+	
+	public void updateRecChoice() {
+		recChoice.getItems().clear();
+		for(Receipt i : recs) {
+			recChoice.getItems().add(i.getName());
+		}
+		
+	}
+	
+	public void displayRec() {
+		displayRec(recChoice.getValue().toString());
 	}
 	
 	public Coupon setCoupon(String s) {
@@ -295,7 +310,7 @@ public class PaneController {
 			coupon.pastry = true;
 		else if (s.equals("general")) 
 			coupon.general = true;
-		return Coupon(coupon.drink, coupon.pastry, coupon.general);
+		return coupon;
 	}
 
 
