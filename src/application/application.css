@@ -34,7 +34,7 @@
 	-fx-text-fill: white;
 	-fx-background-color: rgba(0, 0, 0, 0);
 	-fx-font-family: 'Fredericka the Great', cursive;
-	background-image: none;
+	-fx-background-image: none;
 	background-size: auto;
 	-fx-background-size: 100% 100%;
 }
@@ -78,8 +78,44 @@
 	-fx-background-color: rgba(0, 0, 0, 0);
 }
 
+.backToMenuBtn {
+	-fx-background-color: rgba(0, 0, 0, 0);
+	-fx-text-fill: white;
+	-fx-font-size: 25px;
+}
 
+.custNameLabel {
+	-fx-background-color: rgba(0, 0, 0, 0);
+	-fx-text-fill: white;
+	-fx-font-size: 20px;
+}
 
+.custNameField {
+	-fx-text-fill: green;
+	-fx-background-color: white;
+	-fx-opacity: .42;
+}
+
+.cashTenderedLabel {
+	-fx-background-color: rgba(0, 0, 0, 0);
+	-fx-text-fill: white;
+	-fx-font-size: 12px;
+}
+
+.cashTenderedField {
+	-fx-text-fill: green;
+	-fx-background-color: white;
+	-fx-opacity: .42;
+}
+
+.payBtn {
+	-fx-background-color: rgba(0, 0, 0, 0);
+	-fx-text-fill: white;
+	-fx-font-size: 35px;
+}
+.payBtn:hover {
+	-fx-opacity: .9;
+}
 .addToCartButton {
 	-fx-font-size: 30px;
 	-fx-text-fill: white;

@@ -665,7 +665,7 @@
             </GridPane>
          </children>
       </VBox>
-      <Pane fx:id="checkoutScreen" layoutX="6.0" layoutY="28.0" prefHeight="594.0" prefWidth="676.0" visible="false">
+      <Pane fx:id="checkoutScreen" layoutX="6.0" layoutY="28.0" prefHeight="594.0" prefWidth="676.0">
          <children>
             <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="100.0" styleClass="backToMenuBtn" stylesheets="@application.css" text="Back" />
             <VBox layoutX="106.0" layoutY="25.0" prefHeight="569.0" prefWidth="542.0">
@@ -673,15 +673,17 @@
                   <HBox prefHeight="130.0" prefWidth="518.0">
                      <children>
                         <Label prefHeight="50.0" prefWidth="100.0" styleClass="custNameLabel" stylesheets="@application.css" text="Name: " textFill="WHITE" />
-                        <TextField prefHeight="50.0" prefWidth="420.0" styleClass="custNameField" stylesheets="@application.css" />
+                        <TextField fx:id="nameField" prefHeight="50.0" prefWidth="420.0" styleClass="custNameField" stylesheets="@application.css" />
                      </children>
                   </HBox>
-                  <HBox prefHeight="100.0" prefWidth="200.0">
+                  <HBox prefHeight="65.0" prefWidth="542.0">
                      <children>
-                        <Label prefHeight="102.0" prefWidth="100.0" styleClass="cashTenderedLabel" stylesheets="@application.css" text="Cash Tendered:" />
-                        <TextField prefHeight="101.0" prefWidth="445.0" styleClass="cashTenderedField" stylesheets="@application.css" />
+                        <Label prefHeight="63.0" prefWidth="99.0" styleClass="cashTenderedLabel" stylesheets="@application.css" text="Cash Tendered:" />
+                        <TextField fx:id="cashTenderedField" prefHeight="63.0" prefWidth="422.0" styleClass="cashTenderedField" stylesheets="@application.css" />
                      </children>
                   </HBox>
+                  <HBox prefHeight="204.0" prefWidth="542.0" />
+                  <Button fx:id="payButton" mnemonicParsing="false" prefHeight="181.0" prefWidth="290.0" styleClass="payBtn" stylesheets="@application.css" text="Pay" />
                </children>
             </VBox>
          </children>
