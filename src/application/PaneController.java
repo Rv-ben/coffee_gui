@@ -11,9 +11,11 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import backEnd.Decorators.ToppingPrices;
 import backEnd.Factories.DrinkFactory;
@@ -25,7 +27,7 @@ import backEnd.testPackage.Receipt;
 public class PaneController {
 	
 	@FXML
-	private Pane coffeeScreen,teaScreen,croissantScreen,cookieScreen,macaroonScreen;
+	private Pane coffeeScreen,teaScreen,croissantScreen,cookieScreen,macaroonScreen,checkoutScreen;
 	
 	@FXML
 	private GridPane coffeeToppings,teaToppings;
@@ -34,10 +36,16 @@ public class PaneController {
 	private ArrayList<Label> coffeeToppingLabels, teaToppingLabels;
 	
 	@FXML
-	private ChoiceBox coffeeChoice,teaChoice,macChoice,cookieChoice,corsChoice;
+	private ChoiceBox coffeeChoice,teaChoice,macChoice,cookieChoice,corsChoice,recChoice;
 	
 	@FXML
 	private Label coffeeQty,teaQty,sweetnessLabel,corsQty,cookieQty,macQty;
+	
+	@FXML
+	private TextField nameField;
+	
+	@FXML
+	private VBox navButtons;
 	
 	@FXML
 	private ToggleGroup coffeeSize,teaSize;
@@ -80,6 +88,7 @@ public class PaneController {
 		productScreenList.add(macaroonScreen);
 		
 		recs.add(new Receipt(.10,rec,subTotal,tax,total));
+		recChoice.getItems().add(recs.get(recs.size()-1).getName());
 		
 		coffeeToppingLabels = x.getListOf(coffeeToppings.getChildren());
 		teaToppingLabels = x.getListOf(teaToppings.getChildren());
@@ -88,8 +97,8 @@ public class PaneController {
         PastryPrices p = new PastryPrices();
         ToppingPrices t = new ToppingPrices();
 
-        p.init();
-        t.init();
+        p.init(true);
+        t.init(true);
 	}
 	
 	public void productButtonClicked(ActionEvent evt) {
@@ -244,6 +253,35 @@ public class PaneController {
 		
 	}
 	
+	public void displayRec(String name) {
+		Receipt r = findRecByName(name);
+		r.printReceipt();
+	}
+	
+	public Receipt findRecByName(String name) {
+		for(Receipt i: recs) {
+			if(i.getName().equalsIgnoreCase(name))
+				return i;
+		}
+		return null;
+	}
+	
+	public void backButton() {
+		checkoutScreen.setVisible(false);
+		navButtons.setVisible(true);
+	}
+	
+	public void checkoutButton() {
+		navButtons.setVisible(false);
+		clearProductScreens();
+		checkoutScreen.setVisible(true);
+	}
+	
+	public void payButton() {
+		recs.get(recs.size()-1).setName(nameField.getText());
+		recs.add(new Receipt(.10,rec,subTotal,tax,total));
+		recChoice.getItems().add(recs.get(recs.size()-1).getName());
+	}
 	
 
 }
