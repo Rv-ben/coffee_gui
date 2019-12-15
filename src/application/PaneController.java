@@ -300,8 +300,7 @@ public class PaneController {
 	}
 	
 	public void createCoupon() {
-		//String s = couponCodeField.getText();
-		String s = "pastry";
+		String s = couponCodeField.getText();
 		Coupon coupon = new Coupon();
 		s.toLowerCase();
 		
