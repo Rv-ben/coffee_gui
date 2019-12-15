@@ -21,7 +21,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onInputMethodTextChanged="#displayRec" prefHeight="650.0" prefWidth="1000.0" styleClass="mainBackground" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PaneController">
    <children>
-      <Pane fx:id="teaScreen" layoutX="119.0" layoutY="31.0" prefHeight="594.0" prefWidth="543.0" visible="false">
+      <Pane fx:id="teaScreen" layoutX="119.0" layoutY="31.0" prefHeight="594.0" prefWidth="543.0">
          <children>
             <HBox prefHeight="100.0" prefWidth="532.0">
                <children>
