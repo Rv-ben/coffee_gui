@@ -60,6 +60,8 @@ public class PaneController {
 	@FXML
 	private ListView rec;
 	
+	private int currentRecieptIndex;
+	
 	@FXML
 	private Label subTotal,total,tax;
 	
@@ -112,6 +114,7 @@ public class PaneController {
             @Override
             public void changed(ObservableValue<? extends String > observableValue, String number, String number2) {
               displayRec(number2);
+              currentRecieptIndex = findRecIndex(number2);
             }
           });
 	}
@@ -252,16 +255,15 @@ public class PaneController {
 	}
 	
 	public void addAmountToCart(int num, Product x) {
-		int lastIndex = recs.size()-1;
 		
 		for(int i = 0; i<num;i++) {
-			recs.get(lastIndex).listOfProducts.add(x);
+			recs.get(currentRecieptIndex).listOfProducts.add(x);
 		}
 		
 	}
 	
 	public void updateRec() {
-		recs.get(recs.size()-1).printReceipt();
+		recs.get(currentRecieptIndex).printReceipt();
 	}
 	
 	public void checkOut() {
@@ -281,6 +283,15 @@ public class PaneController {
 		return null;
 	}
 	
+	public int findRecIndex(String name) {
+		for(int i=0;i<recs.size();i++) {
+			if(recs.get(i).getName().equalsIgnoreCase(name)) {
+				return i;
+			}
+		}
+		return -1;
+	}
+	
 	public void backButton() {
 		checkoutScreen.setVisible(false);
 		navButtons.setVisible(true);
@@ -293,7 +304,7 @@ public class PaneController {
 	}
 	
 	public void payButton() {
-		recs.get(recs.size()-1).setName(nameField.getText());
+		recs.get(currentRecieptIndex).setName(nameField.getText());
 		recs.add(new Receipt(.10,rec,subTotal,tax,total));
 		updateRecChoice();
 	}
@@ -322,8 +333,8 @@ public class PaneController {
 		else if (s.equals("general")) 
 			coupon.general = true;
 		
-		recs.get(recs.size()-1).setCoupon(coupon);
-		recs.get(recs.size()-1).printReceipt();
+		recs.get(currentRecieptIndex).setCoupon(coupon);
+		recs.get(currentRecieptIndex).printReceipt();
 	}
 
 }
