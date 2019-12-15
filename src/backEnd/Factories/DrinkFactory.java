@@ -82,7 +82,7 @@ public class DrinkFactory implements Factory{
 
         switch(topping){
             case milk: return new Milk(drink);
-            case SoyMilk: return new SoyMilk(drink);
+            case soyMilk: return new SoyMilk(drink);
             case halfHalf: return new HalfHalf(drink);
             case boba: return new Boba(drink);
             case poppingBoba: return new PoppingBoba(drink);
