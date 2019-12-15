@@ -376,7 +376,7 @@
             <Point3D />
          </rotationAxis>
       </Pane>
-      <VBox prefHeight="650.0" prefWidth="101.0">
+      <VBox fx:id="navButtons" prefHeight="650.0" prefWidth="101.0">
          <children>
             <Button fx:id="CoffeeButton" mnemonicParsing="false" onAction="#productButtonClicked" prefHeight="130.0" prefWidth="100.0" styleClass="tabButton" stylesheets="@application.css" text="Coffee" />
             <Button fx:id="TeaButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#productButtonClicked" prefHeight="130.0" prefWidth="100.0" styleClass="tabButton" stylesheets="@application.css" text="Tea" />
@@ -670,20 +670,36 @@
             <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="100.0" styleClass="backToMenuBtn" stylesheets="@application.css" text="Back" />
             <VBox layoutX="106.0" layoutY="25.0" prefHeight="569.0" prefWidth="542.0">
                <children>
-                  <HBox prefHeight="130.0" prefWidth="518.0">
+                  <HBox prefHeight="106.0" prefWidth="542.0">
                      <children>
                         <Label prefHeight="50.0" prefWidth="100.0" styleClass="custNameLabel" stylesheets="@application.css" text="Name: " textFill="WHITE" />
-                        <TextField fx:id="nameField" prefHeight="50.0" prefWidth="420.0" styleClass="custNameField" stylesheets="@application.css" />
+                        <TextField fx:id="nameField" prefHeight="50.0" prefWidth="420.0" promptText="Enter Customer Name" styleClass="custNameField" stylesheets="@application.css" />
                      </children>
                   </HBox>
-                  <HBox prefHeight="65.0" prefWidth="542.0">
+                  <HBox prefHeight="102.0" prefWidth="542.0">
                      <children>
                         <Label prefHeight="63.0" prefWidth="99.0" styleClass="cashTenderedLabel" stylesheets="@application.css" text="Cash Tendered:" />
-                        <TextField fx:id="cashTenderedField" prefHeight="63.0" prefWidth="422.0" styleClass="cashTenderedField" stylesheets="@application.css" />
+                        <TextField fx:id="cashTenderedField" prefHeight="63.0" prefWidth="422.0" promptText="Enter Cash Tendered" styleClass="cashTenderedField" stylesheets="@application.css" />
                      </children>
                   </HBox>
-                  <HBox prefHeight="204.0" prefWidth="542.0" />
-                  <Button fx:id="payButton" mnemonicParsing="false" prefHeight="181.0" prefWidth="290.0" styleClass="payBtn" stylesheets="@application.css" text="Pay" />
+                  <HBox prefHeight="105.0" prefWidth="542.0">
+                     <children>
+                        <Label prefHeight="62.0" prefWidth="98.0" styleClass="couponCodeLabel" text="Coupon Code:" />
+                        <TextField prefHeight="69.0" prefWidth="423.0" promptText="Enter Coupon Code" styleClass="couponCodeField" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="114.0" prefWidth="542.0">
+                     <children>
+                        <Label prefHeight="98.0" prefWidth="100.0" styleClass="changeDueLabel" stylesheets="@application.css" text="Change Due:" />
+                        <TextField prefHeight="104.0" prefWidth="422.0" styleClass="changeDueField" stylesheets="@application.css" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="174.0" prefWidth="542.0">
+                     <children>
+                        <Button fx:id="payButton" mnemonicParsing="false" prefHeight="173.0" prefWidth="271.0" styleClass="payBtn" stylesheets="@application.css" text="Pay" />
+                        <Button fx:id="applyCouponsBtn" mnemonicParsing="false" prefHeight="173.0" prefWidth="300.0" styleClass="applyCouponsBtn" stylesheets="@application.css" text="Apply Coupons" />
+                     </children>
+                  </HBox>
                </children>
             </VBox>
          </children>
