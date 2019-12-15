@@ -15,26 +15,32 @@ public class LoadHelper {
 	
 	@SuppressWarnings("unchecked")
 	public void loadCoffeeChoiceBox(ChoiceBox coffee) {
-		coffee.getItems().add(DrinkTypes.darkRoast.toString());
-		coffee.getItems().add(DrinkTypes.almondLatte.toString());
-		coffee.getItems().add(DrinkTypes.hazelnutLatte.toString());
+		coffee.getItems().add(DrinkTypes.housePremium.toString());
+		coffee.getItems().add(DrinkTypes.seaCream.toString());
 		coffee.getItems().add(DrinkTypes.pumpkinSpiceLatte.toString());
+		coffee.getItems().add(DrinkTypes.houseCoffee.toString());
+		coffee.getItems().add(DrinkTypes.houseDecaf.toString());
+		coffee.getItems().add(DrinkTypes.hazelNutLatte.toString());
+		coffee.getItems().add(DrinkTypes.Olla.toString());
 	}
 	public void loadTeaChoiceBox(ChoiceBox tea) {
 		tea.getItems().add(DrinkTypes.jasmineGreenTea.toString());
-		tea.getItems().add(DrinkTypes.milkTea.toString());
+		tea.getItems().add(DrinkTypes.greenTea.toString());
+		tea.getItems().add(DrinkTypes.roseGreenTea.toString());
 		tea.getItems().add(DrinkTypes.summerMintTea.toString());
+		tea.getItems().add(DrinkTypes.taroTea.toString());
 	}
 	public void loadCorsChoiceBox(ChoiceBox cors) {
-		cors.getItems().add(PastryTypes.chocolateNut.toString());
-		cors.getItems().add(PastryTypes.plain.toString());
+		cors.getItems().add(PastryTypes.croissant.toString());
+		cors.getItems().add(PastryTypes.strawBerryCroissant.toString());
 	}
 	public void loadCookieChoiceBox(ChoiceBox cookie) {
-		cookie.getItems().add(PastryTypes.oatmeal.toString());
-		cookie.getItems().add(PastryTypes.variety.toString());
+		cookie.getItems().add(PastryTypes.oatMeal.toString());
+		cookie.getItems().add(PastryTypes.nutChocolateChip.toString());
+		cookie.getItems().add(PastryTypes.chocalateChip.toString());
 	}
 	public void loadMacChoiceBox(ChoiceBox mac) {
-		mac.getItems().add(PastryTypes.variety.toString());
+		mac.getItems().add(PastryTypes.macaroon.toString());
 	}
 	
 	
