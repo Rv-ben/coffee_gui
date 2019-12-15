@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package backend.Products;
+package backEnd.Products;
 
 import backEnd.enums.DrinkTypes;
 import java.util.*;

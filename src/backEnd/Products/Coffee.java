@@ -1,7 +1,7 @@
 package backEnd.Products;
 
 import backEnd.enums.DrinkTypes;
-import backend.Products.DrinkPrices;
+import backEnd.Products.DrinkPrices;
 import backEnd.enums.Sizes;
 
 public class Coffee extends Drink {
