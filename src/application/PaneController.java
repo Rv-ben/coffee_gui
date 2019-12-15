@@ -44,7 +44,7 @@ public class PaneController {
 	private Label coffeeQty,teaQty,sweetnessLabel,corsQty,cookieQty,macQty;
 	
 	@FXML
-	private TextField nameField;
+	private TextField nameField, couponCodeField;
 	
 	@FXML
 	private VBox navButtons;
@@ -299,8 +299,9 @@ public class PaneController {
 		displayRec(recChoice.getValue().toString());
 	}
 	
-	public Coupon setCoupon(String s) {
-		
+	public void createCoupon() {
+		//String s = couponCodeField.getText();
+		String s = "pastry";
 		Coupon coupon = new Coupon();
 		s.toLowerCase();
 		
@@ -310,7 +311,8 @@ public class PaneController {
 			coupon.pastry = true;
 		else if (s.equals("general")) 
 			coupon.general = true;
-		return coupon;
+		
+		recs.get(recs.size()-1).setCoupon(coupon);
 	}
 
 
