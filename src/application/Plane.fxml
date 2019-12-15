@@ -630,7 +630,7 @@
       </Pane>
       <VBox layoutX="685.0" layoutY="27.0" prefHeight="594.0" prefWidth="296.0">
          <children>
-            <ChoiceBox prefHeight="31.0" prefWidth="296.0" styleClass="selectTypeBox" />
+            <ChoiceBox fx:id="recChoice" prefHeight="31.0" prefWidth="296.0" styleClass="selectTypeBox" />
             <ListView fx:id="recChoice" prefHeight="440.0" prefWidth="296.0" styleClass="selectTypeBox" />
             <GridPane gridLinesVisible="true" prefHeight="192.0" prefWidth="542.0">
                <columnConstraints>
@@ -679,6 +679,7 @@
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
                         <Label prefHeight="102.0" prefWidth="100.0" styleClass="cashTenderedLabel" stylesheets="@application.css" text="Cash Tendered:" />
+                        <TextField prefHeight="101.0" prefWidth="445.0" styleClass="cashTenderedField" stylesheets="@application.css" />
                      </children>
                   </HBox>
                </children>
