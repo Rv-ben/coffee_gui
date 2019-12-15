@@ -3,6 +3,8 @@ package backEnd.enums;
   * Topping types
   */
 public enum ToppingTypes{
-    halfHalf,soyMilk,boba,poppingBoba,passionFruitJelly,lycheeJelly,
-    grassJelly,coconutJelly,whipCream, freshStrawberry
+    boba,poppingBoba,
+    passionFruitJelly,lycheeJelly, grassJelly,coconutJelly,
+    whipCream, freshStrawberry,
+    milk,SoyMilk,halfHalf;
 }

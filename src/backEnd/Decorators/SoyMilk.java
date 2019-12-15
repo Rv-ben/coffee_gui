@@ -30,6 +30,6 @@ public class SoyMilk extends Topping {
 
     @Override
     public double getCost() {
-        return base.getCost() + ToppingPrices.getCost(ToppingTypes.soyMilk);
+        return base.getCost() + ToppingPrices.getCost(ToppingTypes.SoyMilk);
     }
 }

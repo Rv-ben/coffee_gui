@@ -2,6 +2,7 @@ package backEnd.Products;
 
 import backEnd.enums.DrinkTypes;
 import backEnd.enums.Sizes;
+import backend.Products.DrinkPrices;
 
 public class Tea extends Drink {
 	DrinkTypes spec;
@@ -16,17 +17,9 @@ public class Tea extends Drink {
 
     public double getCost(){
     	double cost = super.getCost();
-    	switch(spec) {
-    	case jasmineGreenTea:
-    		cost += 1.00;
-    		break;
-    	case summerMintTea:
-    		cost += 1.00;
-    		break;
-    	case milkTea:
-    		cost += 0.50;
-    		break;
-    	}
+    	
+    		cost += DrinkPrices.getCost(spec);
+    	
         return cost;
     }
     public String getDescription(){

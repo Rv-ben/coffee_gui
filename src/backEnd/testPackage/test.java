@@ -1,12 +1,8 @@
 package backEnd.testPackage;
 
-
-import java.util.ArrayList;
-
 import backEnd.Decorators.ToppingPrices;
 import backEnd.Factories.DrinkFactory;
 import backEnd.Factories.PastryFactory;
-import backEnd.Factories.guiProduct;
 import backEnd.Products.PastryPrices;
 import backEnd.Products.Product;
 import backEnd.enums.Details;
@@ -14,42 +10,99 @@ import backEnd.enums.DrinkTypes;
 import backEnd.enums.PastryTypes;
 import backEnd.enums.Sizes;
 import backEnd.enums.ToppingTypes;
+import backend.Products.DrinkPrices;
+import java.util.ArrayList;
 
 public class test{
+    
+    public static boolean DEFAULT = false;
+    
     public static void main(String args[]) {
-        PastryPrices p = new PastryPrices();
-        ToppingPrices t = new ToppingPrices();
-
-        p.init();
-        t.init();
-        System.out.println("hello");
-        ArrayList<ToppingTypes> listOfToppingTypes = new ArrayList<ToppingTypes>();
-        ArrayList<Product> listOfProducts = new ArrayList<Product>();
+        
+        System.out.println("Default prices?");
+        
+        ToppingPrices.init(DEFAULT);
+        PastryPrices.init(DEFAULT);
+        DrinkPrices.init(DEFAULT);
+        
+        ArrayList<ToppingTypes> listOfToppingTypes = new ArrayList<>();
+        ArrayList<Product> listOfProducts = new ArrayList<>();
 
         DrinkFactory Dfactory = new DrinkFactory();
         Details details = new Details();
         PastryFactory Pfactory = new PastryFactory();
 
-        details.spec = DrinkTypes.almondLatte;
+        details.spec = DrinkTypes.hazelNutLatte;
         details.type = DrinkTypes.coffee;
         details.size = Sizes.medium;
+        details.toppings.add(ToppingTypes.whipCream);
+        details.toppings.add(ToppingTypes.milk);
+        listOfProducts.add(Dfactory.createProduct(details));
+       
+        details.toppings.clear();
+       
         
-        listOfToppingTypes.add(ToppingTypes.whipCream);
         
-        guiProduct g = new guiProduct(details,listOfToppingTypes);
+        details.spec = DrinkTypes.greenTea;
+        details.type = DrinkTypes.tea;
+        details.size = Sizes.medium;
+        details.toppings.add(ToppingTypes.boba);
+  
+        listOfProducts.add(Dfactory.createProduct(details));
+       
+        details.toppings.clear();
+        
+        details.pType = PastryTypes.cookie;
+        details.qty = 3;
+        details.special = PastryTypes.nutChocolateChip;
+        listOfProducts.add(Pfactory.createProduct(details));
+        
+           
+           
+         
+        
+                details.toppings.clear();
+       
+        details.pType = PastryTypes.macaroon;
+        details.qty = 3;
+        details.special = PastryTypes.macaroon;
+        listOfProducts.add(Pfactory.createProduct(details));
+        
+        
+        
+        details.pType = PastryTypes.croissant;
+        details.qty = 3;
+        details.special = PastryTypes.strawBerryCroissant;
+        listOfProducts.add(Pfactory.createProduct(details));
+        
+          
+        
+        details.pType = PastryTypes.croissant;
+        details.qty = 3;
+        details.special = PastryTypes.croissant;
+        listOfProducts.add(Pfactory.createProduct(details));
+        
+        Receipt r = new Receipt(listOfProducts, 0);
+        r.printReceipt();
+        
+       /* Receipt r = new Receipt(listOfProducts, 0);
+        r.printReceipt();
+        */
+      /*  
+   //     guiProduct g = new guiProduct(details,listOfToppingTypes);
         //listOfProducts.add(Dfactory.createProduct(details, listOfToppingTypes));
-        listOfProducts.add(Dfactory.createProduct(g));
+     
         listOfToppingTypes.clear();
         
         
            details.qty = 7;
         details.special = PastryTypes.oatmeal;
         details.pType = PastryTypes.cookie;
-        g = new guiProduct(details,listOfToppingTypes);
+      //  g = new guiProduct(details,listOfToppingTypes);
         listOfProducts.add(Pfactory.createProduct(g));
         listOfToppingTypes.clear();
 
-/*
+
         details.spec = DrinkTypes.darkRoast;
         details.type = DrinkTypes.coffee;
         details.size = Sizes.large;
@@ -143,7 +196,6 @@ public class test{
 
         System.out.println("\n\n\n\n");
 
-        r.printReceipt();
 
 
         Coupon coupon = new Coupon();
@@ -154,8 +206,8 @@ public class test{
         r.setCoupon(coupon);
 
         System.out.println("\n\n\n\nAHHHHHHHHHHHH");
-*/       Receipt r = new Receipt(listOfProducts, .10);
-        r.printReceipt();
+*/   //    Receipt r = new Receipt(listOfProducts, .10);
+       // r.printReceipt();
 
 
 

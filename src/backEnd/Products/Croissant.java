@@ -13,18 +13,12 @@ public class Croissant extends Pastry{
     }
 
     public double getCost(){
-        double cost = super.getCost();
+        double cost = 0;
         if (heated == true){
             cost += 0.50;
             System.out.print("here");
         }
-        switch(spec) {
-               case chocolateNut:
-                    cost += 1.00;
-                    break;
-               case plain:
-                   break;
-            }
+        cost += PastryPrices.getCost(this.spec);
         return cost;
     }
     public String getDescription(){

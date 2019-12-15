@@ -5,5 +5,7 @@ package backEnd.enums;
   */
 
 public enum PastryTypes {
-	croissant, cookie, macaroon, chocolateNut, plain, oatmeal, variety,threeCookie,sixMac;
+    cookie, croissant, strawBerryCroissant,
+    chocalateChip, oatMeal, nutChocolateChip,  macaroon,
+   threeCookie,sixMac,threeOatMeal,threeNut;
 }

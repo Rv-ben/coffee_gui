@@ -19,17 +19,8 @@ public abstract class Pastry implements Product {
 
     public double getCost() {
         double cost = 0;
-        switch (general) {
-           case croissant:
-                cost = PastryPrices.getCost(PastryTypes.croissant);
-                break;
-            case cookie:
-                cost = PastryPrices.getCost(PastryTypes.cookie);
-                break;
-            case macaroon:
-                cost = PastryPrices.getCost(PastryTypes.macaroon);
-                break;
-        }
+        System.out.println("General here " + general.toString());
+        cost += PastryPrices.getCost(general);
         return cost;
     }
 

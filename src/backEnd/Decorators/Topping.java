@@ -13,7 +13,7 @@ public abstract class Topping extends Drink{
   * @param base takes base to add topping to 
   * 
   */
-    Topping(Drink base){
+    public Topping(Drink base){
         this.base = base;
     }
     

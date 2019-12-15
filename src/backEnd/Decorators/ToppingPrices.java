@@ -15,20 +15,42 @@ import backEnd.enums.ToppingTypes;
  * @author tansr
  */
 public class ToppingPrices {
+    public static boolean defaultPrices;
     private static HashMap<ToppingTypes, Double> prices = new HashMap<>();
     private static final Scanner input = new Scanner(System.in);
   
     
-    static {
+
+
+   
+     public static void init(boolean dPrice ) {
+         System.out.println("beep 1");
+         defaultPrices = dPrice;
+         
+                 System.out.println("beep 2");
+       if(defaultPrices) {
+           
+                   
+           for (ToppingTypes top : ToppingTypes.values()) { 
+               if(top == ToppingTypes.halfHalf) {
+                   prices.put(top,.25);
+                       System.out.println("Price for : " + top + " " + .25 );
+                       continue;
+               }
+           System.out.println("Price for : " + top + " " + .5 );
+           prices.put(top, .5);
+       }
+       
+       } else {
         for (ToppingTypes top : ToppingTypes.values()) { 
            System.out.println("Price for : " + top);
            prices.put(top, Double.valueOf(input.nextLine()));
-      }
-        
-     System.out.println(Arrays.asList(prices));
+       }
+         }
+       System.out.println(Arrays.asList(prices));
     }
-     public void init() {}
-    public static double getCost(ToppingTypes top){
+     
+       public static double getCost(ToppingTypes top){
         return prices.get(top);
     }
     

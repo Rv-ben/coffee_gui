@@ -17,7 +17,7 @@ public abstract class Drink implements Product {
         this.name = name;
         this.size = size;
     }
-
+    //default s 1 , m 1.50, L 2
     public double getCost(){
         switch(this.size){
             case small: return 1.00;

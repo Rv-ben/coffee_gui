@@ -1,6 +1,5 @@
 package backEnd.Factories;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 import backEnd.Decorators.Boba;
@@ -19,6 +18,7 @@ import backEnd.Products.Product;
 import backEnd.Products.Tea;
 import backEnd.enums.Details;
 import backEnd.enums.ToppingTypes;
+import backend.Decorators.Milk;
 
 /**
  * Drink Factory class, implements Factory
@@ -81,7 +81,8 @@ public class DrinkFactory implements Factory{
     public Drink addDecorators(ToppingTypes topping,Drink drink){
 
         switch(topping){
-            case soyMilk: return new SoyMilk(drink);
+            case milk: return new Milk(drink);
+            case SoyMilk: return new SoyMilk(drink);
             case halfHalf: return new HalfHalf(drink);
             case boba: return new Boba(drink);
             case poppingBoba: return new PoppingBoba(drink);
