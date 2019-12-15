@@ -312,6 +312,7 @@ public class PaneController {
 			coupon.general = true;
 		
 		recs.get(recs.size()-1).setCoupon(coupon);
+		recs.get(0).printReceipt();
 	}
 
 
