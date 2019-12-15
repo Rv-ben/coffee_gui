@@ -12,6 +12,8 @@ import javafx.scene.control.ListView;
  */
 public class Receipt{
 	
+	String name;
+	
     public ArrayList<Product> listOfProducts = new ArrayList<Product>();
 
     public double subTotal=0,total=0,discount=0, tax = 1;
@@ -23,18 +25,21 @@ public class Receipt{
     private Label subTotalLab,totalLab,taxLab;
 
     Receipt(ArrayList<Product> products,double tax){
+    	this.name = "In progress...!";
         this.listOfProducts = products;
         this.tax = tax;
         this.coupon = new Coupon();
     }
 
     Receipt(ArrayList<Product> products,double tax,Coupon coupon){
+    	this.name = "In progress...!";
         this.listOfProducts = products;
         this.tax = tax;
         this.coupon = coupon;
     }
     
     public Receipt(double tax,ListView display,Label sub,Label tot, Label ta){
+    	this.name = "In progress...!";
     	this.tax = tax;
     	this.display = display;
     	this.subTotalLab = sub;
@@ -44,6 +49,14 @@ public class Receipt{
 
     public void setCoupon (Coupon c){
         this.coupon = c;
+    }
+    
+    public void setName(String n) {
+    	this.name = n;
+    }
+    
+    public String getName() {
+    	return this.name;
     }
 
     public void printReceipt(){
@@ -57,8 +70,8 @@ public class Receipt{
         //displaying all the purchased items
         for (int i = 0; i<listOfProducts.size(); i++) {
         	//System.out.print("Item No. " + (i+1) + "\n" );
-        	display.getItems().add("Type: " + listOfProducts.get(i).getDescription());
-        	display.getItems().add("Price: " + listOfProducts.get(i).getCost() + "\n\n");
+        	display.getItems().add(listOfProducts.get(i).getDescription());
+        	display.getItems().add("\t\t\t\t\t" + listOfProducts.get(i).getCost() + "\n\n");
         }
         
         productPrice = getTotalValue();
