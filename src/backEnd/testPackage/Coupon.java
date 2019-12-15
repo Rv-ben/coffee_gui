@@ -4,17 +4,20 @@ package backEnd.testPackage;
 
 public class Coupon{
     
-    public boolean drink = false ,pastry = false;
+    public boolean drink = false ,pastry = false, general = false;
 
     public double percent = 1;
 
-    Coupon(){
+    public Coupon(){
+    	drink = false;
+    	pastry = false;
+    	general = false;
     }
 
-    Coupon(boolean drink, boolean pastry,double percent){
+    public Coupon(boolean drink, boolean pastry, boolean general){
         this.drink = drink;
         this.pastry = pastry;
-        this.percent = percent;
+        this.general = general;
     }
     
 }

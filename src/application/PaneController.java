@@ -23,6 +23,7 @@ import backEnd.Factories.PastryFactory;
 import backEnd.Products.PastryPrices;
 import backEnd.Products.Product;
 import backEnd.enums.*;
+import backEnd.testPackage.Coupon;
 import backEnd.testPackage.Receipt;
 public class PaneController {
 	
@@ -283,5 +284,19 @@ public class PaneController {
 		recChoice.getItems().add(recs.get(recs.size()-1).getName());
 	}
 	
+	public Coupon setCoupon(String s) {
+		
+		Coupon coupon = new Coupon();
+		s.toLowerCase();
+		
+		if (s.equals("drink")) 
+			coupon.drink = true;
+		else if (s.equals("pastry")) 
+			coupon.pastry = true;
+		else if (s.equals("general")) 
+			coupon.general = true;
+		return Coupon(coupon.drink, coupon.pastry, coupon.general);
+	}
+
 
 }
