@@ -5,6 +5,22 @@
 	-fx-background-color: black;
 	-fx-font-family: 'Fredericka the Great', cursive;
 	-fx-color: white;
+	-fx-width: 100%;
+	-fx-height: 100%;
+}
+
+#addToCartButton {
+	-fx-font-size: 30px;
+	-fx-text-fill: white;
+	-fx-background-color: rgba(0, 0, 0, 0);
+	-fx-font-family: 'Fredericka the Great', cursive;
+	background-image: none;
+	background-size: auto;
+	-fx-background-size: 100% 100%;
+}
+
+#addToCartButton:hover {
+	-fx-text-fill: yellow;
 }
 
 .CoffeeMilkText{
@@ -14,8 +30,10 @@
 
 .mainBackground {
 	-fx-background-image: url("https://img.freepik.com/free-photo/black-chalk-board-texture_89245-170.jpg?size=626&ext=jpg");
-	
+	-fx-background-size: cover;
 	-fx-background-color: black;
+	-fx-width: 100%;
+	-fx-mid-height: 100%;
 }
 
 .tabButton{
@@ -28,6 +46,10 @@
 	-fx-background-size: 100% 100%;
 }
 
+.tabButton:hover {
+	-fx-text-fill: yellow;
+	
+}
 
 .teaToppings {
 	-fx-font-size: 130%;
@@ -37,6 +59,10 @@
 	-fx-background-image: none;
 	background-size: auto;
 	-fx-background-size: 100% 100%;
+}
+
+.teaToppings:hover {
+	-fx-text-fill: green;
 }
 
 .Minus{
@@ -91,7 +117,7 @@
 }
 
 .custNameField {
-	-fx-text-fill: green;
+	-fx-text-fill: red;
 	-fx-background-color: white;
 	-fx-opacity: .42;
 }
@@ -108,13 +134,53 @@
 	-fx-opacity: .42;
 }
 
+.couponCodeLabel {
+	-fx-background-color: rgba(0, 0, 0, 0);
+	-fx-text-fill: white;
+	-fx-font-size: 12px;
+}
+
+.couponCodeField {
+	-fx-text-fill: green;
+	-fx-background-color: white;
+	-fx-opacity: .42;
+}
+
+.changeDueField {
+	-fx-text-fill: white;
+	-fx-background-color: white;
+	-fx-opacity: .42;
+}
+
+.changeDueLabel {
+	-fx-background-color: rgba(0, 0, 0, 0);
+	-fx-text-fill: white;
+	-fx-font-size: 12px;
+}
+.payBtn:hover {
+	
+	-fx-text-fill: green; 
+}
+
 .payBtn {
 	-fx-background-color: rgba(0, 0, 0, 0);
 	-fx-text-fill: white;
 	-fx-font-size: 35px;
 }
-.payBtn:hover {
-	-fx-opacity: .9;
+
+.applyCouponsBtn {
+	-fx-background-color: rgba(0, 0, 0, 0);
+	-fx-text-fill: white;
+	-fx-font-size: 35px;
+}
+
+.applyCouponsBtn:hover {
+	-fx-text-fill: green;
+}
+
+.changeDueAmount {
+	-fx-text-fill: white;
+	-fx-font-size: 35px;
 }
 .addToCartButton {
 	-fx-font-size: 30px;
