@@ -8,6 +8,7 @@ import javafx.beans.value.ChangeListener;
 import javafx.event.*;
 import javafx.fxml.FXML;
 import javafx.scene.*;
+import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
@@ -46,10 +47,13 @@ public class PaneController {
 	private Label coffeeQty,teaQty,sweetnessLabel,corsQty,cookieQty,macQty;
 	
 	@FXML
-	private TextField nameField, couponCodeField;
+	private TextField nameField, couponCodeField,cashTenderedField;
 	
 	@FXML
 	private VBox navButtons;
+	
+	@FXML
+	private Button payButton;
 	
 	@FXML
 	private ToggleGroup coffeeSize,teaSize;
@@ -63,7 +67,7 @@ public class PaneController {
 	private int currentRecieptIndex;
 	
 	@FXML
-	private Label subTotal,total,tax;
+	private Label subTotal,total,tax,changeDueAmount;
 	
 	@FXML
 	private DrinkFactory d  = new DrinkFactory();
@@ -266,10 +270,6 @@ public class PaneController {
 		recs.get(currentRecieptIndex).printReceipt();
 	}
 	
-	public void checkOut() {
-		
-	}
-	
 	public void displayRec(String name) {
 		Receipt r = findRecByName(name);
 		r.printReceipt();
@@ -295,6 +295,17 @@ public class PaneController {
 	public void backButton() {
 		checkoutScreen.setVisible(false);
 		navButtons.setVisible(true);
+		payButton.setVisible(true);
+		recChoice.getSelectionModel().selectLast();
+		
+	}
+	
+	public void clearCheckout() {
+		changeDueAmount.setText("");
+		cashTenderedField.setText("");
+		nameField.setText("");
+		couponCodeField.setText("");
+		
 	}
 	
 	public void checkoutButton() {
@@ -307,6 +318,9 @@ public class PaneController {
 		recs.get(currentRecieptIndex).setName(nameField.getText());
 		recs.add(new Receipt(.10,rec,subTotal,tax,total));
 		updateRecChoice();
+		payButton.setVisible(false);
+		double changeDue = Double.parseDouble(cashTenderedField.getText()) - Double.parseDouble(total.getText());
+		changeDueAmount.setText(""+changeDue);
 	}
 	
 	public void updateRecChoice() {
