@@ -297,7 +297,7 @@ public class PaneController {
 		navButtons.setVisible(true);
 		payButton.setVisible(true);
 		recChoice.getSelectionModel().selectLast();
-		
+		clearCheckout();
 	}
 	
 	public void clearCheckout() {
