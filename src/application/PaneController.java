@@ -121,6 +121,8 @@ public class PaneController {
               currentRecieptIndex = findRecIndex(number2);
             }
           });
+        
+        
 	}
 	
 	public void productButtonClicked(ActionEvent evt) {
@@ -369,6 +371,11 @@ public class PaneController {
 			totalS += i.total;
 		}
 		totalSales.setText(""+totalS);
+	}
+	
+	public void selectSale() {
+		String recName = salesList.getSelectionModel().getSelectedItem().toString();
+		displayRec(recName);
 	}
 
 }
