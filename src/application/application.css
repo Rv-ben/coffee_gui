@@ -87,7 +87,7 @@
 }
 
 .tabButton:hover {
-	-fx-text-fill: yellow;
+	-fx-text-fill: red;
 	-fx-background-color: white;
 	
 }
