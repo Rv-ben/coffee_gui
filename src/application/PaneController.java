@@ -350,5 +350,10 @@ public class PaneController {
 		recs.get(currentRecieptIndex).setCoupon(coupon);
 		recs.get(currentRecieptIndex).printReceipt();
 	}
+	
+	public void deleteButton() {
+		int itemDeleteIndex =  rec.getSelectionModel().getSelectedIndex() / 2;
+		recs.get(currentRecieptIndex).listOfProducts.remove(itemDeleteIndex);
+	}
 
 }
