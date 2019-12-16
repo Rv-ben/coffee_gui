@@ -347,13 +347,12 @@ public class PaneController {
 	public void createCoupon() {
 		String s = couponCodeField.getText();
 		Coupon coupon = new Coupon();
-		s.toLowerCase();
 		
-		if (s.equals("drink")) 
+		if (s.equalsIgnoreCase("drink")) 
 			coupon.drink = true;
-		else if (s.equals("pastry")) 
+		else if (s.equalsIgnoreCase("pastry")) 
 			coupon.pastry = true;
-		else if (s.equals("general")) 
+		else if (s.equalsIgnoreCase("general")) 
 			coupon.general = true;
 		
 		recs.get(currentRecieptIndex).setCoupon(coupon);

@@ -79,11 +79,10 @@ public class Receipt{
      // getting an index number of highest price drink
         if(coupon != null)
         if (this.coupon.drink == true) {
-        	
         	drinkDiscountPrice = listOfProducts.get(findDrink()).getCost() * DRINK_RATE;
         	discount += drinkDiscountPrice;
-        	System.out.print("The drink coupon has been applied to item No." + (findDrink()+1));
-        	System.out.printf(", applied discout $%5.2f%n", drinkDiscountPrice );
+        	display.getItems().add("Applied to item No." + (findDrink()+1));
+        	display.getItems().add(String.format("applied discount $%5.2f%n", drinkDiscountPrice ));
         	
         }
         
