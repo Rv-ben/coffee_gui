@@ -24,7 +24,32 @@
 	-fx-text-fill: yellow;
 }
 
+.welcomeLabel {
+	-fx-background-image: none;
+	-fx-background-size: 100% 100%;
+	-fx-font-family: 'Fredericka the Great', cursive;
+	-fx-font-size: 100px;
+	-fx-text-align: center;
+	-fx-text-fill: white;
+}
 
+.totalSales {
+	-fx-text-fill: white;
+	-fx-font-family: 'Fredericka the Great', cursive;
+	-fx-font-size: 40px;
+}
+
+.totSalesLabel {
+	-fx-text-fill: white;
+	-fx-font-family: 'Fredericka the Great', cursive;
+	-fx-font-size: 30px;
+}
+
+.totSalesName {
+	-fx-text-fill: white;
+	-fx-font-family: 'Fredericka the Great', cursive;
+	-fx-font-size: 20px;
+}
 .deleteButton {
 	-fx-text-fill: white;
 	-fx-background-color: red;
