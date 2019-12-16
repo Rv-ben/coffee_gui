@@ -97,7 +97,7 @@ public class PaneController {
 		productScreenList.add(cookieScreen);
 		productScreenList.add(macaroonScreen);
 		
-		recs.add(new Receipt(.10,rec,subTotal,tax,total));
+		recs.add(new Receipt(.10,rec,subTotal,total,tax));
 		recChoice.getItems().add(recs.get(recs.size()-1).getName());
 		
 		coffeeToppingLabels = x.getListOf(coffeeToppings.getChildren());
@@ -316,7 +316,7 @@ public class PaneController {
 	
 	public void payButton() {
 		recs.get(currentRecieptIndex).setName(nameField.getText());
-		recs.add(new Receipt(.10,rec,subTotal,tax,total));
+		recs.add(new Receipt(.10,rec,subTotal,total,tax));
 		updateRecChoice();
 		payButton.setVisible(false);
 		double changeDue = Double.parseDouble(cashTenderedField.getText()) - Double.parseDouble(total.getText());
