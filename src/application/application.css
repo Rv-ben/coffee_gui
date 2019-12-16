@@ -10,8 +10,8 @@
 	-fx-height: 100%;
 }
 
-#addToCartButton {
-	-fx-font-size: 30px;
+.addToCartButton {
+	-fx-font-size: 75px;
 	-fx-text-fill: white;
 	-fx-background-color: rgba(0, 0, 0, 0);
 	-fx-font-family: 'Fredericka the Great', cursive;
@@ -20,13 +20,14 @@
 	-fx-background-size: 100% 100%;
 }
 
-#addToCartButton:hover {
-	-fx-text-fill: yellow;
+.addToCartButton:hover {
+	-fx-text-fill: green;
+	-fx-background-color: white;
 }
 
 .welcomeLabel {
 	-fx-background-image: none;
-	-fx-background-size: 100% 100%;
+	-fx-background-size: 100%;
 	-fx-font-family: 'Fredericka the Great', cursive;
 	-fx-font-size: 100px;
 	-fx-text-align: center;
@@ -60,6 +61,7 @@
 .deleteButton:hover {
 	-fx-text-fill: white;
 	-fx-background-color: #C90000;
+	-fx-font-size: 20px;
 }
 .CoffeeMilkText{
 	-fx-text-fill: white;
@@ -75,7 +77,7 @@
 }
 
 .tabButton{
-	-fx-font-size: 100%;
+	-fx-font-size: 22px;
 	-fx-text-fill: white;
 	-fx-background-color: rgba(0, 0, 0, 0);
 	-fx-font-family: 'Fredericka the Great', cursive;
@@ -86,6 +88,7 @@
 
 .tabButton:hover {
 	-fx-text-fill: yellow;
+	-fx-background-color: white;
 	
 }
 
@@ -103,10 +106,30 @@
 	-fx-text-fill: green;
 }
 
+.checkoutBtn {
+	-fx-text-align: center;
+	-fx-font-size: 30px;
+	-fx-text-fill: white;
+	-fx-background-color: rgba(0, 0, 0, 0);
+	-fx-font-family: 'Fredericka the Great', cursive;
+}
+
+.checkoutBtn:hover {
+	-fx-background-color: green;
+	-fx-text-fill: white;
+	
+}
 .Minus{
 	-fx-background-color: white;
 }
-
+.Minus:hover {
+	-fx-background-color: red;
+	-fx-text-fill: white;
+}
+.Plus:hover {
+	-fx-background-color: green;
+	-fx-text-fill: white;
+}
 
 .sizeBox {
 	-fx-font-size: 100%;
@@ -119,7 +142,7 @@
 }
 
 .smlButtons {
-	-fx-font-size: 100%;
+	-fx-font-size: 15px;
 	-fx-text-fill: white;
 	-fx-background-color: rgba(0, 0, 0, 0);
 	-fx-font-family: 'Fredericka the Great', cursive;
@@ -129,7 +152,7 @@
 }
 
 .selectTypeBox {
-	-fx-font-size: 100%;
+	-fx-font-size: 15px;
 	-fx-text-fill: white;
 	-fx-background-color: rgba(255,255,255, 0.3);
 	-fx-font-family: 'Fredericka the Great', cursive;
@@ -145,7 +168,12 @@
 .backToMenuBtn {
 	-fx-background-color: rgba(0, 0, 0, 0);
 	-fx-text-fill: white;
-	-fx-font-size: 25px;
+	-fx-font-size: 20px;
+}
+
+.backToMenuBtn:hover {
+	-fx-background-color: red;
+	-fx-text-fill: white;
 }
 
 .custNameLabel {
@@ -199,29 +227,35 @@
 	-fx-font-size: 12px;
 }
 .payBtn:hover {
-	
+	-fx-background-color: white;
 	-fx-text-fill: green; 
 }
 
 .payBtn {
 	-fx-background-color: rgba(0, 0, 0, 0);
 	-fx-text-fill: white;
-	-fx-font-size: 35px;
+	-fx-font-size: 75px;
+	-fx-text-align: center;
 }
 
 .applyCouponsBtn {
 	-fx-background-color: rgba(0, 0, 0, 0);
 	-fx-text-fill: white;
-	-fx-font-size: 35px;
+	-fx-font-size: 45px;
+	-fx-text-align: center;
 }
 
 .applyCouponsBtn:hover {
 	-fx-text-fill: green;
+	-fx-background-color: white;
 }
-
+.teaSizeOptionsGrid {
+	-fx-font-size: 25px;
+	-fx-text-align: center;
+}
 .changeDueAmount {
 	-fx-text-fill: white;
-	-fx-font-size: 35px;
+	-fx-font-size: 22px;
 }
 .addToCartButton {
 	-fx-font-size: 30px;
