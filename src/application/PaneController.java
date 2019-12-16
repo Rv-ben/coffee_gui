@@ -360,7 +360,7 @@ public class PaneController {
 	}
 	
 	public void deleteButton() {
-		int itemDeleteIndex =  rec.getSelectionModel().getSelectedIndex() / 2;
+		int itemDeleteIndex =  rec.getSelectionModel().getSelectedIndex() / 3;
 		recs.get(currentRecieptIndex).listOfProducts.remove(itemDeleteIndex);
 		updateRec();
 	}
