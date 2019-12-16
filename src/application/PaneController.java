@@ -32,7 +32,7 @@ import backEnd.testPackage.Receipt;
 public class PaneController {
 	
 	@FXML
-	private Pane coffeeScreen,teaScreen,croissantScreen,cookieScreen,macaroonScreen,checkoutScreen;
+	private Pane coffeeScreen,teaScreen,croissantScreen,cookieScreen,macaroonScreen,checkoutScreen,salesScreen;
 	
 	@FXML
 	private GridPane coffeeToppings,teaToppings;
@@ -62,12 +62,12 @@ public class PaneController {
 	private RadioButton heatedCors;
 	
 	@FXML
-	private ListView rec;
+	private ListView rec,salesList;
 	
 	private int currentRecieptIndex;
 	
 	@FXML
-	private Label subTotal,total,tax,changeDueAmount;
+	private Label subTotal,total,tax,changeDueAmount,totalSales;
 	
 	@FXML
 	private DrinkFactory d  = new DrinkFactory();
@@ -138,6 +138,8 @@ public class PaneController {
 			croissantScreen.setVisible(true); break;
 		case "MacButton":
 			macaroonScreen.setVisible(true); break;
+		case "salesButton":
+			salesScreen.setVisible(true); break;
 		}
 	}
 	
@@ -317,10 +319,13 @@ public class PaneController {
 	public void payButton() {
 		recs.get(currentRecieptIndex).setName(nameField.getText());
 		recs.add(new Receipt(.10,rec,subTotal,total,tax));
+		
 		updateRecChoice();
 		payButton.setVisible(false);
 		double changeDue = Double.parseDouble(cashTenderedField.getText()) - Double.parseDouble(total.getText());
 		changeDueAmount.setText(""+changeDue);
+		
+		updateTotalSales();
 	}
 	
 	public void updateRecChoice() {
@@ -355,6 +360,15 @@ public class PaneController {
 		int itemDeleteIndex =  rec.getSelectionModel().getSelectedIndex() / 2;
 		recs.get(currentRecieptIndex).listOfProducts.remove(itemDeleteIndex);
 		updateRec();
+	}
+	
+	public void updateTotalSales() {
+		double totalS = 0;
+		for(Receipt i:recs) {
+			salesList.getItems().add(i.getName());
+			totalS += i.total;
+		}
+		totalSales.setText(""+totalS);
 	}
 
 }
