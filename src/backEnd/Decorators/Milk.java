@@ -26,6 +26,6 @@ public class Milk extends Topping {
     }
 
     public String getDescription(){
-        return "Added : " + ToppingTypes.milk.toString() + "\n";
+        return base.getDescription() +  "\nAdded : " + ToppingTypes.milk.toString() + "\n";
     }
 }
