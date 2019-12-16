@@ -110,9 +110,9 @@ public class PaneController {
         ToppingPrices t = new ToppingPrices();
         DrinkPrices d = new DrinkPrices();
         
-        d.init(true);
-        p.init(true);
-        t.init(true);
+        d.init(false);
+        p.init(false);
+        t.init(false);
         
         recChoice.getSelectionModel()
         .selectedItemProperty()
