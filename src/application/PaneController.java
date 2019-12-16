@@ -32,7 +32,7 @@ import backEnd.testPackage.Receipt;
 public class PaneController {
 	
 	@FXML
-	private Pane coffeeScreen,teaScreen,croissantScreen,cookieScreen,macaroonScreen,checkoutScreen,salesScreen;
+	private Pane coffeeScreen,teaScreen,croissantScreen,cookieScreen,macaroonScreen,checkoutScreen,salesScreen,welcomeScreen;
 	
 	@FXML
 	private GridPane coffeeToppings,teaToppings;
@@ -91,11 +91,13 @@ public class PaneController {
 		x.loadMacChoiceBox(macChoice);
 		x.loadCookieChoiceBox(cookieChoice);
 		
+		productScreenList.add(welcomeScreen);
 		productScreenList.add(coffeeScreen);
 		productScreenList.add(teaScreen);
 		productScreenList.add(croissantScreen);
 		productScreenList.add(cookieScreen);
 		productScreenList.add(macaroonScreen);
+		productScreenList.add(salesScreen);
 		
 		recs.add(new Receipt(.10,rec,subTotal,total,tax));
 		recChoice.getItems().add(recs.get(recs.size()-1).getName());
