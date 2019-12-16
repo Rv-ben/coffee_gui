@@ -2,7 +2,7 @@ package backEnd.Products;
 
 import backEnd.enums.DrinkTypes;
 import backEnd.enums.Sizes;
-import backend.Products.DrinkPrices;
+import backEnd.Products.DrinkPrices;
 
 public class Tea extends Drink {
 	DrinkTypes spec;
