@@ -327,7 +327,8 @@ public class PaneController {
 		updateRecChoice();
 		payButton.setVisible(false);
 		double changeDue = Double.parseDouble(cashTenderedField.getText()) - Double.parseDouble(total.getText());
-		changeDueAmount.setText(""+changeDue);
+		
+		changeDueAmount.setText(String.format("$ " + "%.2f", changeDue));
 		
 		updateTotalSales();
 	}
