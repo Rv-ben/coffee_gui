@@ -367,6 +367,7 @@ public class PaneController {
 	}
 	
 	public void updateTotalSales() {
+		salesList.getItems().clear();
 		double totalS = 0;
 		for(Receipt i:recs) {
 			salesList.getItems().add(i.getName());
