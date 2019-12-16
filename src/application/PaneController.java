@@ -373,7 +373,7 @@ public class PaneController {
 			salesList.getItems().add(i.getName());
 			totalS += i.total;
 		}
-		totalSales.setText(""+totalS);
+		totalSales.setText(String.format("%.2f", totalS));
 	}
 	
 	public void selectSale() {
