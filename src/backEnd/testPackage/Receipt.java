@@ -71,7 +71,8 @@ public class Receipt{
         for (int i = 0; i<listOfProducts.size(); i++) {
         	//System.out.print("Item No. " + (i+1) + "\n" );
         	display.getItems().add(listOfProducts.get(i).getDescription());
-        	display.getItems().add("\t\t\t\t\t - $" + listOfProducts.get(i).getCost() + "\n\n");
+        	display.getItems().add(String.format("\t\t\t\t\t - $%5.2f\n\n", listOfProducts.get(i).getCost()));
+        	//display.getItems().add("\t\t\t\t\t - $" + listOfProducts.get(i).getCost() + "\n\n");
         }
         
         productPrice = getTotalValue();
