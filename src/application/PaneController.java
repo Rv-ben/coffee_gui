@@ -375,8 +375,10 @@ public class PaneController {
 	}
 	
 	public void selectSale() {
-		String recName = salesList.getSelectionModel().getSelectedItem().toString();
-		displayRec(recName);
+		//String recName = salesList.getSelectionModel().getSelectedItem().toString();
+		//displayRec(recName);
+		int index = salesList.getSelectionModel().getSelectedIndex();
+		recChoice.getSelectionModel().select(index);
 	}
 
 }
