@@ -25,21 +25,21 @@ public class Receipt{
     private Label subTotalLab,totalLab,taxLab;
 
     Receipt(ArrayList<Product> products,double tax){
-    	this.name = "In progress...!";
-        this.listOfProducts = products;
+    	this.name = "In progress";
+        this.listOfProducts = products; 
         this.tax = tax;
         this.coupon = new Coupon();
     }
 
     Receipt(ArrayList<Product> products,double tax,Coupon coupon){
-    	this.name = "In progress...!";
+    	this.name = "In progress";
         this.listOfProducts = products;
         this.tax = tax;
         this.coupon = coupon;
     }
     
     public Receipt(double tax,ListView display,Label sub,Label tot, Label ta){
-    	this.name = "In progress...!";
+    	this.name = "In progress";
     	this.tax = tax;
     	this.display = display;
     	this.subTotalLab = sub;
@@ -107,13 +107,14 @@ public class Receipt{
         	discount += GENERAL_DISCOUNT;
         }
         
-        subTotalLab.setText(""+ productPrice);
+        subTotalLab.setText(String.format("$ %.2f", productPrice));
         System.out.println("\nDiscount: "+ discount);
         System.out.println("Tax( "+ tax + "%): "+ (productPrice+discount) * tax);
         System.out.printf("Tax( %.2f %%): %.2f%n", tax, (productPrice+discount) * tax);
-        taxLab.setText(""+tax);
+        int taxInt = (int)tax * 100;
+        taxLab.setText(String.format("%d %%", taxInt));
         total = ((productPrice+discount) + (productPrice+discount)*tax);
-        totalLab.setText(""+total);
+        totalLab.setText(String.format("$ %.2f", total));
         //System.out.printf( (productPrice+discount) * tax);
         System.out.println("Total: "+ ((productPrice+discount) + (productPrice+discount)*tax));
 
