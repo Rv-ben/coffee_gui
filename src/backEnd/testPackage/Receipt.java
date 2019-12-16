@@ -107,11 +107,11 @@ public class Receipt{
         	discount += GENERAL_DISCOUNT;
         }
         
-        subTotalLab.setText(String.format("$ %.2f", productPrice));
+        subTotalLab.setText(String.format("%.2f", productPrice));
         System.out.println("\nDiscount: "+ discount);
         System.out.println("Tax( "+ tax + "%): "+ (productPrice+discount) * tax);
         System.out.printf("Tax( %.2f %%): %.2f%n", tax, (productPrice+discount) * tax);
-        taxLab.setText(String.format("$ %.2f", (productPrice*tax)));
+        taxLab.setText(String.format("%.2f", (productPrice*tax)));
         total = ((productPrice+discount) + (productPrice+discount)*tax);
         totalLab.setText(String.format("%.2f", total));
         //System.out.printf( (productPrice+discount) * tax);
