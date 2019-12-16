@@ -31,6 +31,6 @@ public class Cookie extends Pastry{
     }
     @Override
     public String getDescription(){
-       return spec.name() + "\n";
+       return spec.name() + "\n" + "\t\t\t\tQuantity: "+ qty + "\n";
     }
 }

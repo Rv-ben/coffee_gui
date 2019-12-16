@@ -69,10 +69,9 @@ public class Receipt{
         display.getItems().clear();
         //displaying all the purchased items
         for (int i = 0; i<listOfProducts.size(); i++) {
-        	//System.out.print("Item No. " + (i+1) + "\n" );
+        	display.getItems().add("Item No. " + (i+1) + "\n" );
         	display.getItems().add(listOfProducts.get(i).getDescription());
         	display.getItems().add(String.format("\t\t\t\t\t - $%5.2f\n\n", listOfProducts.get(i).getCost()));
-        	//display.getItems().add("\t\t\t\t\t - $" + listOfProducts.get(i).getCost() + "\n\n");
         }
         
         productPrice = getTotalValue();
@@ -92,7 +91,9 @@ public class Receipt{
     	if (this.coupon.pastry == true) {
     		//int indexNum = getAllCookies();
     		if (getAllCookies() >0) {
-    			System.out.printf("The cookie coupon $ %5.2f has been applied to item No. %d%n" ,PASTRY_DISCOUNT,(getAllCookies()+1));
+    			display.getItems().add("Applied to item No." + (getAllCookies()+1));
+            	display.getItems().add(String.format("applied discount $%5.2f%n", PASTRY_DISCOUNT ));
+    			//display.getItems().add(String.format("The cookie coupon $ %5.2f has been applied to item No. %d%n" ,PASTRY_DISCOUNT,(getAllCookies()+1)));
     			discount += PASTRY_DISCOUNT;
     		}
     		
@@ -102,7 +103,7 @@ public class Receipt{
         if(coupon != null)
         if (coupon.general == true) {
         	
-        	System.out.printf("The general coupon $ %5.2f has been applied%n" , GENERAL_DISCOUNT);
+        	display.getItems().add(String.format("Coupon $ %5.2f applied%n" , GENERAL_DISCOUNT));
         	discount += GENERAL_DISCOUNT;
         }
         
