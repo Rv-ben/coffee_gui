@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap');
 
+
 .root {
 	-fx-background-image: url("https://img.freepik.com/free-photo/black-chalk-board-texture_89245-170.jpg?size=626&ext=jpg");
 	-fx-background-color: black;
@@ -23,6 +24,18 @@
 	-fx-text-fill: yellow;
 }
 
+
+.deleteButton {
+	-fx-text-fill: white;
+	-fx-background-color: red;
+	-fx-font-family: 'Fredericka the Great', cursive;
+	-fx-font-size: 20px;
+}
+
+.deleteButton:hover {
+	-fx-text-fill: white;
+	-fx-background-color: #C90000;
+}
 .CoffeeMilkText{
 	-fx-text-fill: white;
 	-fx-font-family: 'Fredericka the Great', cursive;
@@ -120,6 +133,7 @@
 	-fx-text-fill: red;
 	-fx-background-color: white;
 	-fx-opacity: .42;
+	-fx-font-size: 25px;
 }
 
 .cashTenderedLabel {
@@ -132,18 +146,20 @@
 	-fx-text-fill: green;
 	-fx-background-color: white;
 	-fx-opacity: .42;
+	-fx-font-size: 25px;
 }
 
 .couponCodeLabel {
 	-fx-background-color: rgba(0, 0, 0, 0);
 	-fx-text-fill: white;
-	-fx-font-size: 12px;
+	-fx-font-size: 16px;
 }
 
 .couponCodeField {
 	-fx-text-fill: green;
 	-fx-background-color: white;
 	-fx-opacity: .42;
+	-fx-font-size: 25px;
 }
 
 .changeDueField {
@@ -190,4 +206,8 @@
 	background-image: none;
 	background-size: auto;
 	-fx-background-size: 100% 100%;
+}
+
+.toppingAmt {
+	-fx-text-fill: green;
 }
